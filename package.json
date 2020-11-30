@@ -3,9 +3,8 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "export": "next export"
+    "build": "next build && next export",
+    "start": "next start"
   },
   "dependencies": {
     "@svgr/webpack": "^5.5.0",

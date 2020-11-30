@@ -53,10 +53,21 @@ export default createGlobalStyle`
     /* End of Reset CSS */
 
     body {
-        background-color: ${(props) => props.theme.colors.background};
+        background-color: ${({ theme }) => theme.colors.background.primary};
     }
 
-    h1, h2, h3, h4, h5, h6, p, span {
-        color: ${(props) => props.theme.colors.text};
+    @font-face {
+        font-family: Quicksand;
+        src: url("/fonts/Quicksand-Regular.ttf") format("truetype");
+        font-weight: regular;
+    }
+
+    h1, h2, h3, h4, h5, h6, p, span, a {
+        color: ${({ theme }) => theme.colors.text.primary};
+        font-family: Quicksand, sans-serif;
+    }
+
+    a {
+        text-decoration: none;
     }
 `;

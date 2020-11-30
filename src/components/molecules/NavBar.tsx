@@ -36,7 +36,7 @@ const ProfilePicture: FC<ImgHTMLAttributes<HTMLImageElement>> = styled.img`
         cursor: pointer;
     }
 
-    @media (max-height: 900px) {
+    @media (min-width: 768px) and (max-height: 900px) {
         display: none;
     }
 `;

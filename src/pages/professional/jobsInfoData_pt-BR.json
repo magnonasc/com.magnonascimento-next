@@ -1,0 +1,18 @@
+[
+    {
+        "id": "avanade-oct2019-dec2019",
+        "companyName": "Avanade",
+        "jobTitle": "Desenvolvedor Fullstack",
+        "jobPeriod": "Outubro 2019 - Dezembro 2019",
+        "jobProjects": [
+            {
+                "projectTitle": "Oi - RPA (Outubro 2019 - Dezembro 2019)",
+                "projectDescription": "Foram desenvolvidos alguns projetos de RPA (Robotic Process Automation) e suas respectivas APIs REST para realizações de algumas operações até então manual em sistemas legados. Neste projeto eu utilizei Java com Spring Boot, C#, Python e OracleDB."
+            },
+            {
+                "projectTitle": "Oi - Portal Minha Oi (Fevereiro 2020 - Dezembro 2020)",
+                "projectDescription": "Participei do desenvolvimento do portal Minha Oi na época de uma grande mudança no Front-End, conseguindo colocar em prática todo o conhecimento prévio em Node e React obtido por meio de estudos por conta própria. Tive oportunidade de me envolver tanto com Front-End (React) quanto Back-End (Node), neste projeto utilizei também MongoDB, Redis (cache), OracleDB, Kibana (logs) e diversas outras integrações."
+            }
+        ]
+    }
+]

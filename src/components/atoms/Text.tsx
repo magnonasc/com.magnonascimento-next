@@ -22,6 +22,7 @@ export const Heading6: FC<HTMLAttributes<HTMLSpanElement>> = styled.h6<HTMLAttri
 
 export const Paragraph: FC<HTMLAttributes<HTMLSpanElement>> = styled.p<HTMLAttributes<HTMLSpanElement>>`
     ${({ theme }) => theme && `color: ${theme.colors.text.primary}`};
+    text-indent: 3rem;
 `;
 
 export const Span: FC<HTMLAttributes<HTMLSpanElement>> = styled.span<HTMLAttributes<HTMLSpanElement>>`

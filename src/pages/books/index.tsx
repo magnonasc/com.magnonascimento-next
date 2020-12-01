@@ -13,7 +13,7 @@ const WelcomingText: FC<HTMLAttributes<HTMLSpanElement>> = styled(Span)`
 `;
 
 const Books: FC<HTMLAttributes<HTMLDivElement> > = () => (
-    <MasterPage centralizeMobile>
+    <MasterPage centralize centralizeMobile>
         <WelcomingText>Em construção!</WelcomingText>
     </MasterPage>
 );

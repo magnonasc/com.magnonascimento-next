@@ -1,0 +1,22 @@
+{
+    "professional": {
+        "label": "Profissional",
+        "url": "/professional"
+    },
+    "education": {
+        "label": "Educação",
+        "url": "/education"
+    },
+    "books": {
+        "label": "Livros",
+        "url": "/books"
+    },
+    "movies": {
+        "label": "Filmes",
+        "url": "/movies"
+    },
+    "games": {
+        "label": "Jogos",
+        "url": "/games"
+    }
+}

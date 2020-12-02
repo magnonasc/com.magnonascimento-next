@@ -11,7 +11,7 @@ const CompanyName = styled(Heading1)`
     }
 `;
 
-const Container = styled.div`
+const Container = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,11 +28,10 @@ const JobTitle = styled(Heading2)`
 `;
 
 const JobPeriod = styled(Heading3)`
-    margin-top: 2rem;
+    margin: 2rem 0 1rem 0;
 `;
 
 const ProjectTitle = styled(Heading4)`
-    margin-top: 3rem;
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
 
@@ -41,10 +40,11 @@ const ProjectTitle = styled(Heading4)`
     }
 `;
 
-const JobDescription = styled.div`
+const JobDescription = styled.section`
     min-width: 20rem;
     max-width: 50rem;
-    padding: 1rem;
+    margin: 1rem;
+    padding-top: 2rem;
     overflow-wrap: break-word;
 
     @media (max-width: 768px) {

@@ -12,6 +12,7 @@ const ContentContainer: FC<ContentContainerProps> = styled.main<ContentContainer
     flex: 3;
     max-width: calc(100vw - 30rem);
     min-width: 25rem;
+    overflow-y: scroll;
     justify-content: ${({ centralize }: ContentContainerProps) => (centralize ? 'center' : 'flex-start')};
     align-items: center;
 

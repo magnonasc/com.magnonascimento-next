@@ -11,10 +11,11 @@ const JobInfoContainer = styled(JobInfo)`
 const Professional: FC<HTMLAttributes<HTMLDivElement>> = () => {
     return (
         <MasterPage>
-            {jobInfoData.map(({ id, companyName, jobTitle, jobPeriod, jobProjects }) => (
+            {jobInfoData.map(({ id, companyName, companyBrandColor = 'white', jobTitle, jobPeriod, jobProjects }) => (
                 <JobInfoContainer
                     key={id}
                     companyName={companyName}
+                    titleColor={companyBrandColor}
                     jobTitle={jobTitle}
                     jobPeriod={jobPeriod}
                     jobProjects={jobProjects}

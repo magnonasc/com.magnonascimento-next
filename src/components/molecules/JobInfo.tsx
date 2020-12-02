@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import { Heading1, Heading2, Heading3, Heading4, Paragraph as ProjectDescription } from '../atoms/Text';
 
 const CompanyName = styled(Heading1)`
-    color: #ff5200;
-    font-size: 5rem;
+    color: ${({ color }) => color};
+    font-size: min(5vw, 5rem);
 
     @media (max-width: 768px) {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 `;
 
@@ -43,18 +43,20 @@ const ProjectTitle = styled(Heading4)`
 
 const JobDescription = styled.div`
     min-width: 20rem;
-    max-width: 80%;
+    max-width: 50rem;
     padding: 1rem;
     overflow-wrap: break-word;
 
     @media (max-width: 768px) {
         min-width: 16rem;
+        max-width: 80vw;
         width: 80vw;
     }
 `;
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
     companyName: string;
+    titleColor: string;
     jobTitle: string;
     jobPeriod: string;
     jobProjects: {
@@ -63,9 +65,9 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
     }[];
 }
 
-const JobInfo: FC<Props> = ({ id, companyName, jobTitle, jobPeriod, jobProjects, className }: Props) => (
+const JobInfo: FC<Props> = ({ id, companyName, titleColor, jobTitle, jobPeriod, jobProjects, className }: Props) => (
     <Container className={className} id={id}>
-        <CompanyName>{companyName}</CompanyName>
+        <CompanyName color={titleColor}>{companyName}</CompanyName>
         <JobTitle>{jobTitle}</JobTitle>
         <JobPeriod>{jobPeriod}</JobPeriod>
         {jobProjects.map(({ projectTitle, projectDescription }) => (

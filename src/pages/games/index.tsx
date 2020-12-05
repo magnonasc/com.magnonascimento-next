@@ -1,7 +1,7 @@
 import { FC, HTMLAttributes } from 'react';
 import styled from 'styled-components';
-import { Span } from '../components/atoms/Text';
-import MasterPage from '../components/templates/Masterpage';
+import { Span } from '../../components/atoms/Text';
+import MasterPage from '../../components/templates/Masterpage';
 
 const WelcomingText: FC<HTMLAttributes<HTMLSpanElement>> = styled(Span)`
     font-size: 5vw;
@@ -12,10 +12,10 @@ const WelcomingText: FC<HTMLAttributes<HTMLSpanElement>> = styled(Span)`
     }
 `;
 
-const Education: FC<HTMLAttributes<HTMLDivElement>> = () => (
-    <MasterPage centralizeMobile>
+const Games: FC<HTMLAttributes<HTMLDivElement>> = () => (
+    <MasterPage centralize centralizeMobile>
         <WelcomingText>Em construção!</WelcomingText>
     </MasterPage>
 );
 
-export default Education;
+export default Games;

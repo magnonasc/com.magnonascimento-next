@@ -1,0 +1,59 @@
+[
+    {
+        "id": "hurb-jan2020-present",
+        "companyName": "HURB",
+        "companyBrandColor": "#293e79",
+        "jobTitle": "Desenvolvedor Fullstack",
+        "jobPeriod": "Janeiro 2020 - Presente",
+        "jobProjects": []
+    },
+    {
+        "id": "avanade-oct2019-dec2019",
+        "companyName": "Avanade",
+        "companyBrandColor": "#ff5200",
+        "jobTitle": "Desenvolvedor Fullstack",
+        "jobPeriod": "Outubro 2019 - Dezembro 2019",
+        "jobProjects": [
+            {
+                "projectTitle": "Oi - RPA (Outubro 2019 - Dezembro 2019)",
+                "projectDescription": "Foram desenvolvidos alguns projetos de RPA (Robotic Process Automation) e suas respectivas APIs REST para realizações de algumas operações até então manual em sistemas legados. Neste projeto eu utilizei Java com Spring Boot, C#, Python e OracleDB.",
+                "stack": [
+                    "Java",
+                    "Spring",
+                    "OracleDB",
+                    "C#",
+                    "Python"
+                ]
+            },
+            {
+                "projectTitle": "Oi - Portal Minha Oi (Fevereiro 2020 - Dezembro 2020)",
+                "projectDescription": "Participei do desenvolvimento do portal Minha Oi na época de uma grande mudança no Front-End, conseguindo colocar em prática todo o conhecimento prévio em Node e React obtido por meio de estudos por conta própria. Tive oportunidade de me envolver tanto com Front-End (React) quanto Back-End (Node), neste projeto utilizei também MongoDB, Redis (cache), OracleDB, Kibana (logs) e diversas outras integrações.",
+                "stack": [
+                    "Node",
+                    "React",
+                    "MongoDB",
+                    "OracleDB",
+                    "Redis",
+                    "Kibana"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "globalmentor-jun2016-jul2019",
+        "companyName": "GlobalMentor",
+        "companyBrandColor": "#357cf6",
+        "jobTitle": "Desenvolvedor Java Back-End",
+        "jobPeriod": "Junho 2016 - Julho 2019",
+        "jobProjects": [
+            {
+                "projectTitle": "Intrexon - Aplicativo web para equipe de pesquisa científica",
+                "projectDescription": "Foi desenvolvido uma aplicação web que auxiliou a equipe de pesquisa, centralizando toda a informação da pesquisa em OracleDB e exibindo-as através de uma interface amigável, utilizando AngularJS e Material Design. Meu foco principal neste projeto era o Back-End, embora eu ajudasse também em algumas partes do Front-End.",
+                "stack": [
+                    "Java",
+                    "OracleDB"
+                ]
+            }
+        ]
+    }
+]

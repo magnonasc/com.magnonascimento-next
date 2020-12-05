@@ -1,8 +1,9 @@
 import { FC, HTMLAttributes, ImgHTMLAttributes } from 'react';
 import styled from 'styled-components';
-import { Span } from '../atoms/Text';
-import Link from '../atoms/Link';
-import LinkButton from '../atoms/LinkButton';
+import { Span } from '../../atoms/Text';
+import Link from '../../atoms/Link';
+import LinkButton from '../../atoms/LinkButton';
+import menus from './menus.json';
 
 const NavBarContainer: FC<HTMLAttributes<HTMLElement>> = styled.nav`
     ${({ theme }) => `background-color: ${theme.colors.background.tertiary}`};
@@ -56,28 +57,28 @@ const NavBar: FC<HTMLAttributes<HTMLDivElement>> = () => (
         </Link>
         <ul>
             <NavListItem>
-                <LinkButton href="/professional" passHref>
-                    <NavListItemText>Profissional</NavListItemText>
+                <LinkButton href={menus.professional.url} passHref>
+                    <NavListItemText>{menus.professional.label}</NavListItemText>
                 </LinkButton>
             </NavListItem>
             <NavListItem>
-                <LinkButton href="/education" passHref>
-                    <NavListItemText>Educação</NavListItemText>
+                <LinkButton href={menus.education.url} passHref>
+                    <NavListItemText>{menus.education.label}</NavListItemText>
                 </LinkButton>
             </NavListItem>
             <NavListItem>
-                <LinkButton href="/books" passHref>
-                    <NavListItemText>Livros</NavListItemText>
+                <LinkButton href={menus.books.url} passHref>
+                    <NavListItemText>{menus.books.label}</NavListItemText>
                 </LinkButton>
             </NavListItem>
             <NavListItem>
-                <LinkButton href="/movies" passHref>
-                    <NavListItemText>Filmes</NavListItemText>
+                <LinkButton href={menus.movies.url} passHref>
+                    <NavListItemText>{menus.movies.label}</NavListItemText>
                 </LinkButton>
             </NavListItem>
             <NavListItem>
-                <LinkButton href="/games" passHref>
-                    <NavListItemText>Jogos</NavListItemText>
+                <LinkButton href={menus.games.url} passHref>
+                    <NavListItemText>{menus.games.label}</NavListItemText>
                 </LinkButton>
             </NavListItem>
         </ul>

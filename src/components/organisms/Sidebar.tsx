@@ -1,7 +1,7 @@
 import { FC, HTMLAttributes } from 'react';
 import styled from 'styled-components';
 import SocialMenu from '../molecules/SocialMenu';
-import NavBar from '../molecules/NavBar';
+import NavBar from '../molecules/navbar/NavBar';
 
 const SidebarContainer: FC<HTMLAttributes<HTMLDivElement>> = styled.aside`
     ${({ theme }) => theme && `background-color: ${theme.colors.background.secondary}`};

@@ -30,7 +30,7 @@ const Home: FC = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <Masterpage centralizeMobile>
+            <Masterpage centralize centralizeMobile>
                 <WelcomingText>
                     <BigText>Olá,</BigText>
                     seja bem vindo!

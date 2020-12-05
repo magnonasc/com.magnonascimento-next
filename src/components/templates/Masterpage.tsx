@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes, ReactNode } from 'react';
+import { DOMAttributes, FC, HTMLAttributes } from 'react';
 import styled from 'styled-components';
 import ContentContainer from '../atoms/ContentContainer';
 import Sidebar from '../organisms/Sidebar';
@@ -16,20 +16,23 @@ const MasterContainer: FC<HTMLAttributes<HTMLDivElement>> = styled.div<HTMLAttri
     }
 `;
 
-interface MasterpageProps {
-    children: ReactNode;
+interface MasterpageProps extends DOMAttributes<HTMLDivElement> {
+    centralize?: boolean;
     centralizeMobile?: boolean;
 }
 
-const Masterpage: FC<MasterpageProps> = ({ children, centralizeMobile }: MasterpageProps) => (
+const Masterpage: FC<MasterpageProps> = ({ children, centralizeMobile, centralize, ...props }: MasterpageProps) => (
     <MasterContainer>
         <Sidebar />
-        <ContentContainer centralizeMobile={centralizeMobile}>{children}</ContentContainer>
+        <ContentContainer centralize={centralize} centralizeMobile={centralizeMobile} {...props}>
+            {children}
+        </ContentContainer>
     </MasterContainer>
 );
 
 Masterpage.defaultProps = {
-    centralizeMobile: false
+    centralizeMobile: false,
+    centralize: false
 };
 
 export default Masterpage;

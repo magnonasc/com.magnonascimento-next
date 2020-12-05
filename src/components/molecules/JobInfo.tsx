@@ -1,17 +1,18 @@
-import { FC } from 'react';
+import { FC, HTMLAttributes } from 'react';
 import styled from 'styled-components';
-import { Heading1, Heading2, Heading3, Paragraph } from '../atoms/Text';
+import { Heading1, Heading2, Heading3, Heading4, Paragraph as ProjectDescription, Span } from '../atoms/Text';
+import Icon from '../atoms/Icons';
 
 const CompanyName = styled(Heading1)`
-    color: #ff5200;
-    font-size: 5rem;
+    color: ${({ color }) => color};
+    font-size: 4vw;
 
     @media (max-width: 768px) {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 `;
 
-const Container = styled.div`
+const Container = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,42 +29,105 @@ const JobTitle = styled(Heading2)`
 `;
 
 const JobPeriod = styled(Heading3)`
-    margin-top: 2rem;
+    margin: 2rem 0 1rem 0;
 `;
 
-const Description = styled.div`
-    margin-top: 5rem;
+const ProjectTitle = styled(Heading4)`
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+
+    @media (max-width: 768px) {
+        font-size: 1.25rem;
+    }
+`;
+
+const JobDescription = styled.section`
     min-width: 20rem;
-    max-width: 80%;
-    padding: 1rem;
+    width: 100%;
+    max-width: 50rem;
+    margin: 1rem;
+    padding-top: 2rem;
     overflow-wrap: break-word;
 
     @media (max-width: 768px) {
         min-width: 16rem;
+        max-width: 80vw;
         width: 80vw;
-        height: 20rem;
     }
 `;
 
-interface Props {
+const StackContainer = styled.ul`
+    height: 4rem;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+
+    overflow-x: scroll;
+
+    scrollbar-width: none;
+    ms-overflow-style: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+`;
+
+const TechnologyContainer = styled.li`
+    background-color: ${({ theme }) => theme.colors.background.tertiary};
+    padding: 0 1rem;
+
+    & + li {
+        margin-left: 0.5rem;
+    }
+`;
+
+const Technology = styled.figure`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0.5rem 0;
+
+    svg {
+        width: 1.5rem;
+        fill: ${({ theme }) => theme.colors.icons.primary};
+        margin-right: 1rem;
+    }
+`;
+
+interface Props extends HTMLAttributes<HTMLDivElement> {
     companyName: string;
+    titleColor: string;
     jobTitle: string;
     jobPeriod: string;
+    jobProjects: {
+        projectTitle: string;
+        projectDescription: string;
+        stack: string[];
+    }[];
 }
 
-const JobInfo: FC<Props> = ({ companyName, jobTitle, jobPeriod }: Props) => (
-    <Container>
-        <CompanyName>{companyName}</CompanyName>
+const JobInfo: FC<Props> = ({ id, companyName, titleColor, jobTitle, jobPeriod, jobProjects, className }: Props) => (
+    <Container className={className} id={id}>
+        <CompanyName color={titleColor}>{companyName}</CompanyName>
         <JobTitle>{jobTitle}</JobTitle>
         <JobPeriod>{jobPeriod}</JobPeriod>
-        <Description>
-            <Heading1>Oi - RPA (Outubro 2019 - Dezembro 2019)</Heading1>
-            <Paragraph>
-                Foram desenvolvidos alguns projetos de RPA (Robotic Process Automation) e suas respectivas APIs REST
-                para realizações de algumas operações até então manual em sistemas legados. Neste projeto eu utilizei
-                Java com Spring Boot, C#, Python e OracleDB.
-            </Paragraph>
-        </Description>
+        {jobProjects.map(({ projectTitle, projectDescription, stack }) => (
+            <JobDescription key={projectTitle}>
+                <ProjectTitle>{projectTitle}</ProjectTitle>
+                <ProjectDescription>{projectDescription}</ProjectDescription>
+                <StackContainer>
+                    {stack.map((technology) => (
+                        <TechnologyContainer key={`${projectTitle}-stack-${technology}`}>
+                            <Technology>
+                                <Icon name={technology} />
+                                <figcaption>
+                                    <Span>{technology}</Span>
+                                </figcaption>
+                            </Technology>
+                        </TechnologyContainer>
+                    ))}
+                </StackContainer>
+            </JobDescription>
+        ))}
     </Container>
 );
 

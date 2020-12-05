@@ -26,8 +26,7 @@ const Home: FC = () => {
     return (
         <>
             <Head>
-                <title>Homepage Template</title>
-                <link rel="icon" href="/favicon.ico" />
+                <title>Magno Nascimento</title>
             </Head>
 
             <Masterpage centralize centralizeMobile>

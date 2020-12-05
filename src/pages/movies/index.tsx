@@ -1,4 +1,5 @@
 import { FC, HTMLAttributes } from 'react';
+import Head from 'next/head';
 import styled from 'styled-components';
 import { Span } from '../../components/atoms/Text';
 import MasterPage from '../../components/templates/Masterpage';
@@ -13,9 +14,14 @@ const WelcomingText: FC<HTMLAttributes<HTMLSpanElement>> = styled(Span)`
 `;
 
 const Movies: FC<HTMLAttributes<HTMLDivElement>> = () => (
-    <MasterPage centralize centralizeMobile>
-        <WelcomingText>Em construção!</WelcomingText>
-    </MasterPage>
+    <>
+        <Head>
+            <title>Magno Nascimento - Filmes</title>
+        </Head>
+        <MasterPage centralize centralizeMobile>
+            <WelcomingText>Em construção!</WelcomingText>
+        </MasterPage>
+    </>
 );
 
 export default Movies;

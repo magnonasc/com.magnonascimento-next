@@ -28,27 +28,27 @@ const Icon: FC<IconProps> | null = ({ name }: IconProps) => {
         case 'Facebook':
             return <FacebookLogo />;
         case 'Java':
-            return <JavaLogo />;
+            return <JavaLogo fill="#007396" />;
         case 'Javascript':
-            return <JavascriptLogo />;
+            return <JavascriptLogo fill="#F7DF1E" />;
         case 'MongoDB':
-            return <MongoDBLogo />;
+            return <MongoDBLogo fill="#47A248" />;
         case 'Node':
-            return <NodeLogo />;
+            return <NodeLogo fill="#339933" />;
         case 'OracleDB':
-            return <OracleLogo />;
+            return <OracleLogo fill="#F80000" />;
         case 'React':
-            return <ReactLogo />;
+            return <ReactLogo fill="#61DAFB" />;
         case 'Redis':
-            return <RedisLogo />;
+            return <RedisLogo fill="#DC382D" />;
         case 'C#':
-            return <CSharpLogo />;
+            return <CSharpLogo fill="#239120" />;
         case 'Python':
-            return <PythonLogo />;
+            return <PythonLogo fill="#3776AB" />;
         case 'Kibana':
-            return <KibanaLogo />;
+            return <KibanaLogo fill="#005571" />;
         case 'Spring':
-            return <SpringLogo />;
+            return <SpringLogo fill="#6DB33F" />;
         default:
             return null;
     }

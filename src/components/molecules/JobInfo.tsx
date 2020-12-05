@@ -88,7 +88,6 @@ const Technology = styled.figure`
 
     svg {
         width: 1.5rem;
-        fill: ${({ theme }) => theme.colors.icons.primary};
         margin-right: 1rem;
     }
 `;

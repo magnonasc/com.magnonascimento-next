@@ -48,7 +48,7 @@
         "jobProjects": [
             {
                 "projectTitle": "Intrexon - Aplicativo web para equipe de pesquisa científica",
-                "projectDescription": "Foi desenvolvido uma aplicação web que auxiliou a equipe de pesquisa, centralizando toda a informação da pesquisa em OracleDB e exibindo-as através de uma interface amigável, utilizando AngularJS e Material Design. Meu foco principal neste projeto era o Back-End, embora eu ajudasse também em algumas partes do Front-End.",
+                "projectDescription": "Foi desenvolvido uma aplicação web que auxiliou a equipe de pesquisa, centralizando toda a informação da pesquisa em OracleDB e exibindo-as através de uma interface amigável. Meu foco principal neste projeto era o Back-End.",
                 "stack": [
                     "Java",
                     "OracleDB"

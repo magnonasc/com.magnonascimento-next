@@ -1,8 +1,6 @@
 import { FC, HTMLAttributes } from 'react';
 import styled from 'styled-components';
-import LinkedInLogo from '../../../public/images/icons/linkedin.svg';
-import GitHubLogo from '../../../public/images/icons/github.svg';
-import FacebookLogo from '../../../public/images/icons/facebook.svg';
+import Icon from '../atoms/Icons';
 
 const SocialContainer: FC<HTMLAttributes<HTMLDivElement>> = styled.footer<HTMLAttributes<HTMLDivElement>>`
     display: flex;
@@ -30,8 +28,7 @@ const SocialLink = styled.a`
 
     svg {
         width: 60px;
-        height: 60px;
-        fill: white;
+        fill: ${({ theme }) => theme.colors.icons.primary};
     }
 `;
 
@@ -39,13 +36,13 @@ const SocialMenu: FC<HTMLAttributes<HTMLDivElement>> = () => (
     <SocialContainer>
         <IconContainer>
             <SocialLink href="https://github.com/magnonasc" rel="noreferrer" target="_blank">
-                <GitHubLogo />
+                <Icon name="Github" />
             </SocialLink>
             <SocialLink href="https://www.linkedin.com/in/magnonasc/" rel="noreferrer" target="_blank">
-                <LinkedInLogo />
+                <Icon name="LinkedIn" />
             </SocialLink>
             <SocialLink href="https://www.facebook.com/magnonasc/" rel="noreferrer" target="_blank">
-                <FacebookLogo />
+                <Icon name="Facebook" />
             </SocialLink>
         </IconContainer>
         <a href="mailto:magno@magnonascimento.com">magno@magnonascimento.com</a>

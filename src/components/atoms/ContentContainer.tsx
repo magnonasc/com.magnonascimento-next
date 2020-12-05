@@ -15,6 +15,7 @@ const ContentContainer: FC<ContentContainerProps> = styled.main<ContentContainer
     overflow-y: scroll;
     justify-content: ${({ centralize }: ContentContainerProps) => (centralize ? 'center' : 'flex-start')};
     align-items: center;
+    padding: 1rem;
 
     @media (max-width: 768px) {
         align-items: ${({ centralizeMobile }: ContentContainerProps) => (centralizeMobile ? 'center' : 'flex-start')};
@@ -22,7 +23,8 @@ const ContentContainer: FC<ContentContainerProps> = styled.main<ContentContainer
         min-width: 20rem;
         max-width: 100vw;
         margin-bottom: 4rem;
-        padding: 2.5rem 0;
+        padding: 2.5rem 1rem;
+        overflow-y: initial;
     }
 `;
 

@@ -88,10 +88,4 @@ export default createGlobalStyle`
             border-radius: 1rem;
         }
     }
-
-    #__next {
-        @media (max-width: 768px) {
-            overflow-x: hidden;
-        }
-    }
 `;

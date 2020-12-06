@@ -11,7 +11,8 @@ const MasterContainer: FC<HTMLAttributes<HTMLDivElement>> = styled.div<HTMLAttri
     @media (max-width: 768px) {
         flex-direction: column-reverse;
         height: initial;
-        max-width: 100vw;
+        /* (window size - scrollbar width) */
+        max-width: calc(100vw - 0.5rem);
         min-width: 20rem;
     }
 `;

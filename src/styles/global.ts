@@ -74,7 +74,7 @@ export default createGlobalStyle`
     * {
         /* Firefox as per December 2020 */
         scrollbar-color: ${({ theme }) => theme.colors.scrollbar.primary} transparent;
-        scrollbar-width: 0.5rem;
+        scrollbar-width: thin;
     
         /* Webkit browsers (Chrome, Edge, Safari) December 2020 */
         &::-webkit-scrollbar {

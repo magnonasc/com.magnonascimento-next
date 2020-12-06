@@ -71,7 +71,7 @@ export default createGlobalStyle`
         text-decoration: none;
     }
 
-    *{
+    * {
         /* Firefox as per December 2020 */
         scrollbar-color: ${({ theme }) => theme.colors.scrollbar.primary} transparent;
         scrollbar-width: 0.5rem;
@@ -86,6 +86,12 @@ export default createGlobalStyle`
         &::-webkit-scrollbar-thumb {
             background-color: ${({ theme }) => theme.colors.scrollbar.secondary};
             border-radius: 1rem;
+        }
+    }
+
+    #__next {
+        @media (max-width: 768px) {
+            overflow-x: hidden;
         }
     }
 `;

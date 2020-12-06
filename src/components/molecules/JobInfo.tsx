@@ -63,12 +63,6 @@ const StackContainer = styled.ul`
     align-items: center;
 
     overflow-x: scroll;
-
-    scrollbar-width: none;
-    ms-overflow-style: none;
-    &::-webkit-scrollbar {
-        display: none;
-    }
 `;
 
 const TechnologyContainer = styled.li`

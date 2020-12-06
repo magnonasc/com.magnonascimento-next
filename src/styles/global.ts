@@ -70,4 +70,22 @@ export default createGlobalStyle`
     a {
         text-decoration: none;
     }
+
+    *{
+        /* Firefox as per December 2020 */
+        scrollbar-color: ${({ theme }) => theme.colors.scrollbar.primary} transparent;
+        scrollbar-width: 0.5rem;
+    
+        /* Webkit browsers (Chrome, Edge, Safari) December 2020 */
+        &::-webkit-scrollbar {
+            background-color: transparent;
+            height: 0.5rem;
+            width: 0.5rem;
+        }
+    
+        &::-webkit-scrollbar-thumb {
+            background-color: ${({ theme }) => theme.colors.scrollbar.secondary};
+            border-radius: 1rem;
+        }
+    }
 `;

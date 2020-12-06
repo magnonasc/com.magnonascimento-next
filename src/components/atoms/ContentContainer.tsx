@@ -24,7 +24,6 @@ const ContentContainer: FC<ContentContainerProps> = styled.main<ContentContainer
         max-width: 100vw;
         margin-bottom: 4rem;
         padding: 2.5rem 1rem;
-        overflow-y: initial;
     }
 `;
 

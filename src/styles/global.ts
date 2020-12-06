@@ -84,7 +84,7 @@ export default createGlobalStyle`
         }
     
         &::-webkit-scrollbar-thumb {
-            background-color: ${({ theme }) => theme.colors.scrollbar.secondary};
+            background-color: ${({ theme }) => theme.colors.scrollbar.primary};
             border-radius: 1rem;
         }
     }

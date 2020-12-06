@@ -6,8 +6,7 @@ const theme = {
             tertiary: '#1E1F22'
         },
         scrollbar: {
-            primary: '#303236',
-            secondary: '#1E1F22'
+            primary: '#303236'
         },
         border: {
             primary: '#FFFFFF'

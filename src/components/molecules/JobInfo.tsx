@@ -53,6 +53,8 @@ const JobDescription = styled.section`
         min-width: 16rem;
         max-width: 80vw;
         width: 80vw;
+        text-align: justify;
+        text-justify: inter-word;
     }
 `;
 

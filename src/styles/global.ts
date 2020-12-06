@@ -56,15 +56,10 @@ export default createGlobalStyle`
         background-color: ${({ theme }) => theme.colors.background.primary};
     }
 
-    @font-face {
-        font-family: Quicksand;
-        src: url("/fonts/Quicksand-Regular.ttf") format("truetype");
-        font-weight: regular;
-    }
-
     h1, h2, h3, h4, h5, h6, p, span, a {
         color: ${({ theme }) => theme.colors.text.primary};
-        font-family: Quicksand, sans-serif;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 300;
     }
 
     a {

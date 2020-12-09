@@ -13,7 +13,7 @@ const WelcomingText: FC<HTMLAttributes<HTMLSpanElement>> = styled(Span)`
     }
 `;
 
-const Books: FC<HTMLAttributes<HTMLDivElement> > = () => (
+const Books: FC<HTMLAttributes<HTMLDivElement>> = () => (
     <>
         <Head>
             <title>Magno Nascimento - Livros</title>

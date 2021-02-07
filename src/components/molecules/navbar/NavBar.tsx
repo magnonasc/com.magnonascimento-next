@@ -7,8 +7,8 @@ import menus from './menus.json';
 
 const NavBarContainer: FC<HTMLAttributes<HTMLElement>> = styled.nav`
     ${({ theme }) => `background-color: ${theme.colors.background.tertiary}`};
-    height: 40rem;
     width: 20rem;
+    padding-top: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;

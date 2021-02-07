@@ -56,31 +56,13 @@ const NavBar: FC<HTMLAttributes<HTMLDivElement>> = () => (
             <ProfilePicture src="/images/profile.jpeg" />
         </Link>
         <ul>
-            <NavListItem>
-                <LinkButton href={menus.professional.url} passHref>
-                    <NavListItemText>{menus.professional.label}</NavListItemText>
-                </LinkButton>
-            </NavListItem>
-            <NavListItem>
-                <LinkButton href={menus.education.url} passHref>
-                    <NavListItemText>{menus.education.label}</NavListItemText>
-                </LinkButton>
-            </NavListItem>
-            <NavListItem>
-                <LinkButton href={menus.books.url} passHref>
-                    <NavListItemText>{menus.books.label}</NavListItemText>
-                </LinkButton>
-            </NavListItem>
-            <NavListItem>
-                <LinkButton href={menus.movies.url} passHref>
-                    <NavListItemText>{menus.movies.label}</NavListItemText>
-                </LinkButton>
-            </NavListItem>
-            <NavListItem>
-                <LinkButton href={menus.games.url} passHref>
-                    <NavListItemText>{menus.games.label}</NavListItemText>
-                </LinkButton>
-            </NavListItem>
+            {menus.map((menu) => (
+                <NavListItem key={menu.name}>
+                    <LinkButton href={menu.url} passHref>
+                        <NavListItemText>{menu.label}</NavListItemText>
+                    </LinkButton>
+                </NavListItem>
+            ))}
         </ul>
     </NavBarContainer>
 );

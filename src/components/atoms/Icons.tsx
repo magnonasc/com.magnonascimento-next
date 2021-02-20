@@ -3,11 +3,14 @@ import LinkedInLogo from '../../../public/images/icons/social-networks/linkedin.
 import GithubLogo from '../../../public/images/icons/social-networks/github.svg';
 import FacebookLogo from '../../../public/images/icons/social-networks/facebook.svg';
 
+import DockerLogo from '../../../public/images/icons/technologies/docker.svg';
 import JavaLogo from '../../../public/images/icons/technologies/java.svg';
 import JavascriptLogo from '../../../public/images/icons/technologies/javascript.svg';
 import MongoDBLogo from '../../../public/images/icons/technologies/mongodb.svg';
+import MySQLLogo from '../../../public/images/icons/technologies/mysql.svg';
 import NodeLogo from '../../../public/images/icons/technologies/node.svg';
 import OracleLogo from '../../../public/images/icons/technologies/oracle.svg';
+import PHPLogo from '../../../public/images/icons/technologies/php.svg';
 import ReactLogo from '../../../public/images/icons/technologies/react.svg';
 import RedisLogo from '../../../public/images/icons/technologies/redis.svg';
 import CSharpLogo from '../../../public/images/icons/technologies/csharp.svg';
@@ -27,16 +30,22 @@ const Icon: FC<IconProps> | null = ({ name }: IconProps) => {
             return <GithubLogo />;
         case 'Facebook':
             return <FacebookLogo />;
+        case 'Docker':
+            return <DockerLogo fill="#2496ED" />;
         case 'Java':
             return <JavaLogo fill="#007396" />;
         case 'Javascript':
             return <JavascriptLogo fill="#F7DF1E" />;
         case 'MongoDB':
             return <MongoDBLogo fill="#47A248" />;
+        case 'MySQL':
+            return <MySQLLogo fill="#4479A1" />;
         case 'Node':
             return <NodeLogo fill="#339933" />;
         case 'OracleDB':
             return <OracleLogo fill="#F80000" />;
+        case 'PHP':
+            return <PHPLogo fill="#777BB4" />;
         case 'React':
             return <ReactLogo fill="#61DAFB" />;
         case 'Redis':

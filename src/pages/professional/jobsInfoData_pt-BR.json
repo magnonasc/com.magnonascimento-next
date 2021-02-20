@@ -5,7 +5,20 @@
         "companyBrandColor": "#293e79",
         "jobTitle": "Desenvolvedor Fullstack",
         "jobPeriod": "Janeiro 2021 - Presente",
-        "jobProjects": []
+        "jobProjects": [
+            {
+                "projectTitle": "Time de pagamentos",
+                "projectDescription": "Participei dos principais projetos da área de pagamentos da empresa, desenvolvendo demandas tanto para times de operação internos, quanto para fornecedores (B2B) e cliente final (B2C).",
+                "stack": [
+                    "Docker",
+                    "Node",
+                    "MongoDB",
+                    "MySQL",
+                    "PHP",
+                    "Redis"
+                ]
+            }
+        ]
     },
     {
         "id": "avanade-oct2019-dec2019",

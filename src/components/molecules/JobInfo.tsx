@@ -5,7 +5,7 @@ import Icon from '../atoms/Icons';
 
 const CompanyName = styled(Heading1)`
     color: ${({ color }) => color};
-    font-size: 4vw;
+    font-size: 4rem;
 
     @media (max-width: 768px) {
         font-size: 3rem;
@@ -51,8 +51,7 @@ const JobDescription = styled.section`
 
     @media (max-width: 768px) {
         min-width: 16rem;
-        max-width: 80vw;
-        width: 80vw;
+        max-width: 100%;
         text-align: justify;
         text-justify: inter-word;
     }

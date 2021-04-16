@@ -10,8 +10,6 @@ const ContentContainer: FC<ContentContainerProps> = styled.main<ContentContainer
     display: flex;
     flex-direction: column;
     flex: 3;
-    max-width: calc(100vw - 30rem);
-    min-width: 25rem;
     overflow-y: scroll;
     justify-content: ${({ centralize }: ContentContainerProps) => (centralize ? 'center' : 'flex-start')};
     align-items: center;
@@ -20,7 +18,6 @@ const ContentContainer: FC<ContentContainerProps> = styled.main<ContentContainer
     @media (max-width: 768px) {
         align-items: ${({ centralizeMobile }: ContentContainerProps) => (centralizeMobile ? 'center' : 'flex-start')};
         min-height: calc(100vh - 5rem);
-        min-width: 20rem;
         max-width: 100vw;
         margin-bottom: 4rem;
         padding: 0 1rem;

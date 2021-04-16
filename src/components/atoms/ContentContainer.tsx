@@ -17,7 +17,7 @@ const ContentContainer: FC<ContentContainerProps> = styled.main<ContentContainer
 
     @media (max-width: 768px) {
         align-items: ${({ centralizeMobile }: ContentContainerProps) => (centralizeMobile ? 'center' : 'flex-start')};
-        min-height: calc(100vh - 5rem);
+        min-height: calc(100vh);
         max-width: 100vw;
         margin-bottom: 4rem;
         padding: 0 1rem;

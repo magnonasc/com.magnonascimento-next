@@ -18,7 +18,7 @@ const Books: FC<HTMLAttributes<HTMLDivElement>> = () => (
         <Head>
             <title>Magno Nascimento - Livros</title>
         </Head>
-        <MasterPage centralize centralizeMobile>
+        <MasterPage>
             <WelcomingText>Em construção!</WelcomingText>
         </MasterPage>
     </>

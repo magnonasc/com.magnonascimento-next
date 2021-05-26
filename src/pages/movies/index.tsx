@@ -18,7 +18,7 @@ const Movies: FC<HTMLAttributes<HTMLDivElement>> = () => (
         <Head>
             <title>Magno Nascimento - Filmes</title>
         </Head>
-        <MasterPage centralize centralizeMobile>
+        <MasterPage>
             <WelcomingText>Em construção!</WelcomingText>
         </MasterPage>
     </>

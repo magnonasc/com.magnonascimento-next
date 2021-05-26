@@ -1,39 +1,25 @@
-import { DOMAttributes, FC, HTMLAttributes } from 'react';
+import { FC, HTMLAttributes } from 'react';
 import styled from 'styled-components';
-import ContentContainer from '../atoms/ContentContainer';
-import Sidebar from '../organisms/Sidebar';
 
 const MasterContainer: FC<HTMLAttributes<HTMLDivElement>> = styled.div<HTMLAttributes<HTMLDivElement>>`
     display: flex;
-    width: 100vw;
+    flex-direction: column;
+
+    /* (window size - scrollbar width) */
+    width: calc(100vw - 0.5rem);
     height: 100vh;
 
     @media (max-width: 768px) {
-        flex-direction: column-reverse;
         height: initial;
         /* (window size - scrollbar width) */
-        max-width: calc(100vw - 0.5rem);
+        max-width: calc(100vw - 2.5rem);
         min-width: 20rem;
+        padding: 0 1rem;
     }
 `;
 
-interface MasterpageProps extends DOMAttributes<HTMLDivElement> {
-    centralize?: boolean;
-    centralizeMobile?: boolean;
-}
-
-const Masterpage: FC<MasterpageProps> = ({ children, centralizeMobile, centralize, ...props }: MasterpageProps) => (
-    <MasterContainer>
-        <Sidebar />
-        <ContentContainer centralize={centralize} centralizeMobile={centralizeMobile} {...props}>
-            {children}
-        </ContentContainer>
-    </MasterContainer>
+const Masterpage: FC<HTMLAttributes<HTMLDivElement>> = ({ children, ...props }) => (
+    <MasterContainer {...props}>{children}</MasterContainer>
 );
-
-Masterpage.defaultProps = {
-    centralizeMobile: false,
-    centralize: false
-};
 
 export default Masterpage;

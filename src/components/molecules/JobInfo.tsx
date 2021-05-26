@@ -18,6 +18,7 @@ const Container = styled.section`
     justify-content: center;
     align-items: center;
     width: 100%;
+    max-width: 50rem;
 `;
 
 const JobTitle = styled(Heading2)`
@@ -44,7 +45,6 @@ const ProjectTitle = styled(Heading4)`
 const JobDescription = styled.section`
     min-width: 20rem;
     width: 100%;
-    max-width: 50rem;
     margin: 1rem;
     padding-top: 2rem;
     overflow-wrap: break-word;

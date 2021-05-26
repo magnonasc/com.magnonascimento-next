@@ -18,7 +18,7 @@ const Games: FC<HTMLAttributes<HTMLDivElement>> = () => (
         <Head>
             <title>Magno Nascimento - Jogos</title>
         </Head>
-        <MasterPage centralize centralizeMobile>
+        <MasterPage>
             <WelcomingText>Em construção!</WelcomingText>
         </MasterPage>
     </>

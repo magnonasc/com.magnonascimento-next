@@ -41,7 +41,7 @@ const Home: FC = () => {
                     <TitledSection title="Sobre Mim">
                         <About />
                     </TitledSection>
-                    <TitledSection title="Professional">
+                    <TitledSection title="Profissional">
                         <Professional />
                     </TitledSection>
                 </Content>

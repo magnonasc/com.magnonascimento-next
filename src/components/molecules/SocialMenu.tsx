@@ -27,12 +27,8 @@ const SocialLink = styled.a`
     cursor: pointer;
 
     svg {
-        width: 60px;
+        width: 3rem;
         fill: ${({ theme }) => theme.colors.icons.primary};
-
-        @media (max-width: 768px) {
-            width: 48px;
-        }
     }
 `;
 

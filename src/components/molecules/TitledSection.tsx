@@ -12,6 +12,10 @@ const TitledSection: FC<HTMLAttributes<HTMLDivElement>> = styled.section`
     position: relative;
 
     padding-top: 3rem;
+
+    & + section {
+        margin-top: 2rem;
+    }
 `;
 
 const Title: FC<HTMLAttributes<HTMLSpanElement>> = styled.h2`

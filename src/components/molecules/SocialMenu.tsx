@@ -4,15 +4,15 @@ import Icon from '../atoms/Icons';
 
 const SocialContainer: FC<HTMLAttributes<HTMLDivElement>> = styled.footer<HTMLAttributes<HTMLDivElement>>`
     display: flex;
+    align-self: center;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin-top: 1rem;
     width: 22rem;
     height: 8rem;
 
     @media (max-width: 768px) {
-        background-color: transparent;
         width: 100%;
     }
 `;
@@ -29,6 +29,10 @@ const SocialLink = styled.a`
     svg {
         width: 60px;
         fill: ${({ theme }) => theme.colors.icons.primary};
+
+        @media (max-width: 768px) {
+            width: 48px;
+        }
     }
 `;
 

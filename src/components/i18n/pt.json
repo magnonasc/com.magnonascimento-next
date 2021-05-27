@@ -1,0 +1,91 @@
+{
+    "about": {
+        "greetings": {
+            "goodMorning": "Bom dia!",
+            "goodAfternoon": "Boa tarde!",
+            "goodEvening": "Boa noite!",
+            "goodNight": "Boa noite!",
+            "default": "Olá!"
+        },
+        "presentation": "Eu me chamo Magno Nascimento, tenho %s anos, sou graduando de Sistemas de Informação pela Universidade Federal do Estado do Rio de Janeiro (UNIRIO) e atualmente trabalho como Desenvolvedor Fullstack (maior foco em Back-End) na HURB.",
+        "description": [
+            "Sou apaixonado pelo que faço e procuro sempre estar atualizado com as tendências do momento no mercado. Prezo sempre pela qualidade e me sinto muito bem quando realizo uma entrego de valor.",
+            "Tenho interesses também em finanças, livros, jogos e músicas.",
+            "Se precisar de qualquer coisa, você pode me encontrar utilizando um dos meios abaixo... Pode chamar, eu sou legal, eu juro! 😅"
+        ]
+    },
+    "professional": {
+        "previousJobExperiences": [
+            {
+                "id": "hurb-jan2020-present",
+                "companyName": "HURB",
+                "companyBrandColor": "#293e79",
+                "jobTitle": "Desenvolvedor Fullstack",
+                "jobPeriod": "Janeiro 2021 - Presente",
+                "jobProjects": [
+                    {
+                        "projectTitle": "Time de pagamentos",
+                        "projectDescription": "Participei dos principais projetos da área de pagamentos da empresa, desenvolvendo demandas tanto para times de operação internos, quanto para fornecedores (B2B) e cliente final (B2C).",
+                        "stack": [
+                            "Docker",
+                            "Node",
+                            "MongoDB",
+                            "MySQL",
+                            "PHP",
+                            "Redis"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "avanade-oct2019-dec2019",
+                "companyName": "Avanade",
+                "companyBrandColor": "#ff5200",
+                "jobTitle": "Desenvolvedor Fullstack",
+                "jobPeriod": "Outubro 2019 - Dezembro 2020",
+                "jobProjects": [
+                    {
+                        "projectTitle": "Oi - Portal Minha Oi (Fevereiro 2020 - Dezembro 2020)",
+                        "projectDescription": "Participei do desenvolvimento do portal Minha Oi na época de uma grande mudança no Front-End, conseguindo colocar em prática todo o conhecimento prévio em Node e React obtido por meio de estudos por conta própria. Tive oportunidade de me envolver tanto com Front-End (React) quanto Back-End (Node), neste projeto utilizei também MongoDB, Redis (cache), OracleDB, Kibana (logs) e diversas outras integrações.",
+                        "stack": [
+                            "Node",
+                            "React",
+                            "MongoDB",
+                            "OracleDB",
+                            "Redis",
+                            "Kibana"
+                        ]
+                    },
+                    {
+                        "projectTitle": "Oi - RPA (Outubro 2019 - Dezembro 2019)",
+                        "projectDescription": "Foram desenvolvidos alguns projetos de RPA (Robotic Process Automation) e suas respectivas APIs REST para realizações de algumas operações até então manual em sistemas legados. Neste projeto eu utilizei Java com Spring Boot, C#, Python e OracleDB.",
+                        "stack": [
+                            "Java",
+                            "Spring",
+                            "OracleDB",
+                            "C#",
+                            "Python"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "globalmentor-jun2016-jul2019",
+                "companyName": "GlobalMentor",
+                "companyBrandColor": "#357cf6",
+                "jobTitle": "Desenvolvedor Java Back-End",
+                "jobPeriod": "Junho 2016 - Julho 2019",
+                "jobProjects": [
+                    {
+                        "projectTitle": "Intrexon - Aplicativo web para equipe de pesquisa científica",
+                        "projectDescription": "Foi desenvolvido uma aplicação web que auxiliou a equipe de pesquisa, centralizando toda a informação da pesquisa em OracleDB e exibindo-as através de uma interface amigável. Meu foco principal neste projeto era o Back-End.",
+                        "stack": [
+                            "Java",
+                            "OracleDB"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,24 +1,30 @@
 import { FC, HTMLAttributes } from 'react';
 import Head from 'next/head';
 import styled from 'styled-components';
-import { Span } from '../components/atoms/Text';
 import Masterpage from '../components/templates/Masterpage';
+import TitledSection from '../components/molecules/TitledSection';
+import About from '../components/organisms/About/About';
+import Professional from '../components/organisms/Professional/Professional';
+import WelcomePresentation from '../components/organisms/WelcomePresentation';
 
-const WelcomingText: FC<HTMLAttributes<HTMLSpanElement>> = styled(Span)`
-    font-size: 5vw;
-    text-align: center;
+const Content: FC<HTMLAttributes<HTMLDivElement>> = styled.main`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 
-    @media (max-width: 768px) {
-        font-size: 1.5rem;
-    }
-`;
+    animation-name: fadeIn;
+    animation-duration: 2.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
 
-const BigText: FC<HTMLAttributes<HTMLSpanElement>> = styled(Span)`
-    font-size: 10vw;
-    display: block;
-
-    @media (max-width: 768px) {
-        font-size: 7.5rem;
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
     }
 `;
 
@@ -29,11 +35,16 @@ const Home: FC = () => {
                 <title>Magno Nascimento</title>
             </Head>
 
-            <Masterpage centralize centralizeMobile>
-                <WelcomingText>
-                    <BigText>Olá,</BigText>
-                    seja bem vindo!
-                </WelcomingText>
+            <Masterpage>
+                <WelcomePresentation />
+                <Content>
+                    <TitledSection title="Sobre Mim">
+                        <About />
+                    </TitledSection>
+                    <TitledSection title="Professional">
+                        <Professional />
+                    </TitledSection>
+                </Content>
             </Masterpage>
         </>
     );

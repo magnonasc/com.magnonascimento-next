@@ -17,7 +17,7 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
         }
 
         matchMedia.addEventListener('change', (event) => {
-            setIsDarkModePreferred(!event.matches);
+            setIsDarkModePreferred(event.matches);
         });
     }, []);
 

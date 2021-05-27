@@ -7,17 +7,17 @@ import darkTheme from '../styles/dark-theme';
 import lightTheme from '../styles/light-theme';
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
-    const [isDarkModePreferred, setIsDarkModePreferred] = useState(false);
+    const [isDarkModePreferred, setIsDarkModePreferred] = useState(true);
 
     useEffect(() => {
         const matchMedia = window.matchMedia('(prefers-color-scheme: dark)');
 
-        if (matchMedia.matches) {
-            setIsDarkModePreferred(true);
+        if (!matchMedia.matches) {
+            setIsDarkModePreferred(false);
         }
 
         matchMedia.addEventListener('change', (event) => {
-            setIsDarkModePreferred(event.matches);
+            setIsDarkModePreferred(!event.matches);
         });
     }, []);
 

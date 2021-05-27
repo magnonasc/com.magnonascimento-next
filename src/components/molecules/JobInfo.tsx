@@ -3,15 +3,6 @@ import styled from 'styled-components';
 import { Heading1, Heading2, Heading3, Heading4, Paragraph as ProjectDescription, Span } from '../atoms/Text';
 import Icon from '../atoms/Icons';
 
-const CompanyName = styled(Heading1)`
-    color: ${({ color }) => color};
-    font-size: 4rem;
-
-    @media (max-width: 768px) {
-        font-size: 3rem;
-    }
-`;
-
 const Container = styled.section`
     display: flex;
     flex-direction: column;
@@ -19,6 +10,15 @@ const Container = styled.section`
     align-items: center;
     width: 100%;
     max-width: 50rem;
+`;
+
+const CompanyName = styled(Heading1)`
+    color: ${({ color }) => color};
+    font-size: 4rem;
+
+    @media (max-width: 768px) {
+        font-size: 3rem;
+    }
 `;
 
 const JobTitle = styled(Heading2)`

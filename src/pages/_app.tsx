@@ -30,6 +30,10 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
                     href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
                     rel="stylesheet"
                 />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap"
+                    rel="stylesheet"
+                />
                 <meta name="author" content="Magno Nascimento" />
             </Head>
             <ThemeProvider theme={isDarkModePreferred ? darkTheme : lightTheme}>

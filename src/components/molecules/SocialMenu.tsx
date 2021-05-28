@@ -30,6 +30,20 @@ const SocialLink = styled.a`
         width: 3rem;
         fill: ${({ theme }) => theme.colors.icons.primary};
     }
+
+    animation-name: fadeIn;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
 `;
 
 const SocialMenu: FC<HTMLAttributes<HTMLDivElement>> = () => (
@@ -45,7 +59,7 @@ const SocialMenu: FC<HTMLAttributes<HTMLDivElement>> = () => (
                 <Icon name="Facebook" />
             </SocialLink>
         </IconContainer>
-        <a href="mailto:magno@magnonascimento.com">magno@magnonascimento.com</a>
+        <SocialLink href="mailto:magno@magnonascimento.com">magno@magnonascimento.com</SocialLink>
     </SocialContainer>
 );
 

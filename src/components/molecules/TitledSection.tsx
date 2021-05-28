@@ -31,6 +31,20 @@ const Title: FC<HTMLAttributes<HTMLSpanElement>> = styled.h2`
     @media (max-width: 768px) {
         font-size: 2.5rem;
     }
+
+    animation-name: fadeIn;
+    animation-duration: 15s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
 `;
 
 type TitledSectionProps = HTMLAttributes<HTMLDivElement> & {

@@ -20,7 +20,7 @@ const SocialContainer: FC<HTMLAttributes<HTMLDivElement>> = styled.footer<HTMLAt
 const IconContainer: FC<HTMLAttributes<HTMLDivElement>> = styled.div<HTMLAttributes<HTMLDivElement>>`
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-evenly;
 `;
 
 const SocialLink = styled.a`
@@ -54,9 +54,6 @@ const SocialMenu: FC<HTMLAttributes<HTMLDivElement>> = () => (
             </SocialLink>
             <SocialLink href="https://www.linkedin.com/in/magnonasc/" rel="noreferrer" target="_blank">
                 <Icon name="LinkedIn" />
-            </SocialLink>
-            <SocialLink href="https://www.facebook.com/magnonasc/" rel="noreferrer" target="_blank">
-                <Icon name="Facebook" />
             </SocialLink>
         </IconContainer>
         <SocialLink href="mailto:magno@magnonascimento.com">magno@magnonascimento.com</SocialLink>

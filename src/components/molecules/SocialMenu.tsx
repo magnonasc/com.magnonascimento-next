@@ -35,15 +35,6 @@ const SocialLink = styled.a`
     animation-duration: 5s;
     animation-delay: 1s;
     animation-fill-mode: forwards;
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
 `;
 
 const SocialMenu: FC<HTMLAttributes<HTMLDivElement>> = () => (

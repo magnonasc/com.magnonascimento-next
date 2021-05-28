@@ -23,8 +23,6 @@ const Title: FC<HTMLAttributes<HTMLSpanElement>> = styled.h2`
     top: 0;
     left: 0;
 
-    opacity: 0.25;
-
     font-family: 'Major Mono Display';
     font-size: 5rem;
 
@@ -32,17 +30,17 @@ const Title: FC<HTMLAttributes<HTMLSpanElement>> = styled.h2`
         font-size: 2.5rem;
     }
 
-    animation-name: fadeIn;
-    animation-duration: 15s;
+    animation-name: fadeInSectionTitle;
+    animation-duration: 10s;
     animation-delay: 1s;
     animation-fill-mode: forwards;
 
-    @keyframes fadeIn {
+    @keyframes fadeInSectionTitle {
         from {
             opacity: 0;
         }
         to {
-            opacity: 1;
+            opacity: 0.25;
         }
     }
 `;

@@ -24,16 +24,16 @@ const Greeting: FC<HTMLAttributes<HTMLDivElement>> = () => {
         const currentDate = new Date().getHours();
 
         switch (true) {
-            case currentDate > GOOD_NIGHT_HOUR || currentDate < GOOD_MORNING_HOUR:
+            case currentDate >= GOOD_NIGHT_HOUR || currentDate <= GOOD_MORNING_HOUR:
                 setGreeting(greetings.goodNight);
                 break;
-            case currentDate > GOOD_EVENING_HOUR:
+            case currentDate >= GOOD_EVENING_HOUR:
                 setGreeting(greetings.goodEvening);
                 break;
-            case currentDate > GOOD_AFTERNOON_HOUR:
+            case currentDate >= GOOD_AFTERNOON_HOUR:
                 setGreeting(greetings.goodAfternoon);
                 break;
-            case currentDate > GOOD_MORNING_HOUR:
+            case currentDate >= GOOD_MORNING_HOUR:
                 setGreeting(greetings.goodMorning);
                 break;
             default:

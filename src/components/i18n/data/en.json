@@ -14,7 +14,7 @@
         },
         "presentation": "My name is Magno Nascimento, I am %s years old, I study Information Systems at Universidade Federal do Estado do Rio de Janeiro (UNIRIO) and I currently work as a Fullstack Developer (more focused on Back-End) at HURB.",
         "description": [
-            "I'm passionate about what I do and I'm always trying to be up to speed to the current trends in the market. I'm always seeking for delivering quality and good value to the projects I'm working at.",
+            "I'm passionate about what I do and I'm always trying to be up to speed with the current trends in the market. I always seek for delivering quality and value to the projects I'm working on.",
             "I also have some interest for finance, books, games and music.",
             "If you need anything, you can find me using one of the links below... You may contact me, I'm nice, I swear! 😅"
         ]
@@ -31,7 +31,7 @@
                 "jobProjects": [
                     {
                         "projectTitle": "Payments Team",
-                        "projectDescription": "I'm involved with the main projects in the company's payments area, working on demands for both internal operation teams, as well as for suppliers (B2B) and end customers (B2C).",
+                        "projectDescription": "I'm involved with the main projects in the company's payments area, working on demands for internal operation teams, as well as for suppliers (B2B) and end customers (B2C).",
                         "stack": [
                             "Docker",
                             "Node",
@@ -52,7 +52,7 @@
                 "jobProjects": [
                     {
                         "projectTitle": "Oi - Portal Minha Oi (February 2020 - December 2020)",
-                        "projectDescription": "I worked on the development and maintenance of the Portal Minha Oi at the time of a big visual identity change for the Front-End, managing to put in practice all the previous knowledge in Node and React obtained through self-study. I had the opportunity to get involved with both Front-End (React) and Back-End (Node). In this project I also used MongoDB, Redis (cache), OracleDB, Kibana (logs) and several other integrations.",
+                        "projectDescription": "I helped developing and maintaining the Portal Minha Oi at the time of a big visual identity change for the Front-End, managing to put in practice all the previous knowledge in Node and React obtained through self-study. I had the opportunity to get involved with both Front-End (React) and Back-End (Node). In this project I also used MongoDB, Redis (cache), OracleDB, Kibana (logs) and several other integrations.",
                         "stack": [
                             "Node",
                             "React",
@@ -64,7 +64,7 @@
                     },
                     {
                         "projectTitle": "Oi - RPA (October 2019 - December 2019)",
-                        "projectDescription": "I worked on some RPA projects (Robotic Process Automation) and your respective REST APIs in order to automate some procedures performed on legacy systems. In this project I used Java with Spring Boot, C#, Python and OracleDB.",
+                        "projectDescription": "I worked on some RPA projects (Robotic Process Automation) and their respectives REST APIs in order to automate procedures performed by the employees on some legacy systems. In this project I used Java with Spring Boot, C#, Python and OracleDB.",
                         "stack": [
                             "Java",
                             "Spring",
@@ -84,7 +84,7 @@
                 "jobProjects": [
                     {
                         "projectTitle": "Intrexon - Web application for research team",
-                        "projectDescription": "It was developed a web application to support a research team, centering all the research information in OracleDB and displaying them through a user friendly interface. My main role in this project was the Back-End.",
+                        "projectDescription": "I worked on the development and maintaining a web application to support a research team, centering all the research information in OracleDB and displaying them through a user friendly interface. My main role in this project was working with the Back-End.",
                         "stack": [
                             "Java",
                             "OracleDB"

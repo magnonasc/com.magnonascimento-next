@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import ptBR from './data/pt.json';
 import enUS from './data/en.json';
 
-const getI18nData: () => typeof ptBR = () => {
+const getI18n: () => typeof ptBR = () => {
     const { locale } = useRouter();
 
     switch (locale) {
@@ -17,4 +17,4 @@ const getI18nData: () => typeof ptBR = () => {
     }
 };
 
-export default getI18nData;
+export default getI18n;

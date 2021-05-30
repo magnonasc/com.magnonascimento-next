@@ -1,7 +1,7 @@
 import { FC, HTMLAttributes } from 'react';
 import styled from 'styled-components';
 import { Span } from '../atoms/Text';
-import getI18n from '../i18n';
+import getI18n from '../../i18n';
 
 const Presentation: FC<HTMLAttributes<HTMLDivElement>> = styled.aside`
     display: flex;

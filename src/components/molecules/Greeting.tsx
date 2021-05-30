@@ -1,6 +1,6 @@
 import { FC, HTMLAttributes, useEffect, useState } from 'react';
 import styled from 'styled-components';
-import getI18n from '../i18n';
+import getI18n from '../../i18n';
 import { Paragraph } from '../atoms/Text';
 
 const GOOD_MORNING_HOUR = 6;

@@ -6,7 +6,7 @@ import TitledSection from '../components/molecules/TitledSection';
 import About from '../components/organisms/About/About';
 import Professional from '../components/organisms/Professional/Professional';
 import WelcomePresentation from '../components/organisms/WelcomePresentation';
-import getI18n from '../components/i18n';
+import getI18n from '../i18n';
 
 const Content: FC<HTMLAttributes<HTMLDivElement>> = styled.main`
     display: flex;

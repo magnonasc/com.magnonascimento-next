@@ -6,5 +6,9 @@ module.exports = {
         });
 
         return config;
+    },
+    i18n: {
+        locales: ['pt', 'pt-BR', 'en', 'en-US'],
+        defaultLocale: 'pt-BR'
     }
 };

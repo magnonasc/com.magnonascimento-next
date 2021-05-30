@@ -11,10 +11,6 @@ const SocialContainer: FC<HTMLAttributes<HTMLDivElement>> = styled.footer<HTMLAt
     margin-top: 1rem;
     width: 22rem;
     height: 8rem;
-
-    @media (max-width: 768px) {
-        width: 100%;
-    }
 `;
 
 const IconContainer: FC<HTMLAttributes<HTMLDivElement>> = styled.div<HTMLAttributes<HTMLDivElement>>`

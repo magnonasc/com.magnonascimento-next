@@ -1,6 +1,6 @@
 import { FC, HTMLAttributes, useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { about } from '../i18n/pt.json';
+import getI18n from '../i18n';
 import { Paragraph } from '../atoms/Text';
 
 const GOOD_MORNING_HOUR = 6;
@@ -17,7 +17,9 @@ const AboutParagraph = styled(Paragraph)`
 `;
 
 const Greeting: FC<HTMLAttributes<HTMLDivElement>> = () => {
-    const { greetings } = about;
+    const {
+        about: { greetings }
+    } = getI18n();
     const [greeting, setGreeting] = useState(greetings.default);
 
     useEffect(() => {

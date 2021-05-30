@@ -1,14 +1,16 @@
 import { FC, HTMLAttributes } from 'react';
 import styled from 'styled-components';
 import JobInfo from '../../molecules/JobInfo';
-import { professional } from '../../i18n/pt.json';
+import getI18n from '../../i18n';
 
 const JobInfoContainer = styled(JobInfo)`
     min-height: calc(100vh - 2.5rem);
 `;
 
 const Professional: FC<HTMLAttributes<HTMLDivElement>> = () => {
-    const { previousJobExperiences } = professional;
+    const {
+        professional: { previousJobExperiences }
+    } = getI18n();
 
     return (
         <>

@@ -1,0 +1,97 @@
+{
+    "presentation": {
+        "hello": "Hello,",
+        "welcome": "welcome to my website!"
+    },
+    "about": {
+        "title": "About Me",
+        "greetings": {
+            "goodMorning": "Good morning!",
+            "goodAfternoon": "Good afternoon!",
+            "goodEvening": "Good evening!",
+            "goodNight": "Good night!",
+            "default": "Hi!"
+        },
+        "presentation": "My name is Magno Nascimento, I am %s years old, I study Information Systems at Universidade Federal do Estado do Rio de Janeiro (UNIRIO) and I currently work as a Fullstack Developer (more focused on Back-End) at HURB.",
+        "description": [
+            "I'm passionate about what I do and I'm always trying to be up to speed to the current trends in the market. I'm always seeking for delivering quality and good value to the projects I'm working at.",
+            "I also have some interest for finance, books, games and music.",
+            "If you need anything, you can find me using one of the links below... You may contact me, I'm nice, I swear! 😅"
+        ]
+    },
+    "professional": {
+        "title": "Professional",
+        "previousJobExperiences": [
+            {
+                "id": "hurb-jan2020-present",
+                "companyName": "HURB",
+                "companyBrandColor": "#293e79",
+                "jobTitle": "Fullstack Developer",
+                "jobPeriod": "January 2021 - Today",
+                "jobProjects": [
+                    {
+                        "projectTitle": "Payments Team",
+                        "projectDescription": "I'm involved with the main projects in the company's payments area, working on demands for both internal operation teams, as well as for suppliers (B2B) and end customers (B2C).",
+                        "stack": [
+                            "Docker",
+                            "Node",
+                            "MongoDB",
+                            "MySQL",
+                            "PHP",
+                            "Redis"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "avanade-oct2019-dec2019",
+                "companyName": "Avanade",
+                "companyBrandColor": "#ff5200",
+                "jobTitle": "Fullstack Developer",
+                "jobPeriod": "October 2019 - December 2020",
+                "jobProjects": [
+                    {
+                        "projectTitle": "Oi - Portal Minha Oi (February 2020 - December 2020)",
+                        "projectDescription": "I worked on the development and maintenance of the Portal Minha Oi at the time of a big visual identity change for the Front-End, managing to put in practice all the previous knowledge in Node and React obtained through self-study. I had the opportunity to get involved with both Front-End (React) and Back-End (Node). In this project I also used MongoDB, Redis (cache), OracleDB, Kibana (logs) and several other integrations.",
+                        "stack": [
+                            "Node",
+                            "React",
+                            "MongoDB",
+                            "OracleDB",
+                            "Redis",
+                            "Kibana"
+                        ]
+                    },
+                    {
+                        "projectTitle": "Oi - RPA (October 2019 - December 2019)",
+                        "projectDescription": "I worked on some RPA projects (Robotic Process Automation) and your respective REST APIs in order to automate some procedures performed on legacy systems. In this project I used Java with Spring Boot, C#, Python and OracleDB.",
+                        "stack": [
+                            "Java",
+                            "Spring",
+                            "OracleDB",
+                            "C#",
+                            "Python"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "globalmentor-jun2016-jul2019",
+                "companyName": "GlobalMentor",
+                "companyBrandColor": "#357cf6",
+                "jobTitle": "Back-End Java Developer",
+                "jobPeriod": "June 2016 - July 2019",
+                "jobProjects": [
+                    {
+                        "projectTitle": "Intrexon - Web application for research team",
+                        "projectDescription": "It was developed a web application to support a research team, centering all the research information in OracleDB and displaying them through a user friendly interface. My main role in this project was the Back-End.",
+                        "stack": [
+                            "Java",
+                            "OracleDB"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

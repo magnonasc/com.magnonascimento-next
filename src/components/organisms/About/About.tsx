@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic';
 import styled from 'styled-components';
 import { sprintf } from 'sprintf-js';
 import moment from 'moment';
-import { about } from '../../i18n/pt.json';
+import getI18n from '../../i18n';
 import { Paragraph } from '../../atoms/Text';
 import SocialMenu from '../../molecules/SocialMenu';
 
@@ -36,7 +36,9 @@ const AboutParagraph = styled(Paragraph)`
 `;
 
 const Professional: FC<HTMLAttributes<HTMLDivElement>> = () => {
-    const { presentation, description } = about;
+    const {
+        about: { presentation, description }
+    } = getI18n();
 
     return (
         <AboutContainer>

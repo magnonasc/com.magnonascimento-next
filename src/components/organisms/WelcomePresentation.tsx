@@ -1,6 +1,7 @@
 import { FC, HTMLAttributes } from 'react';
 import styled from 'styled-components';
 import { Span } from '../atoms/Text';
+import getI18n from '../i18n';
 
 const Presentation: FC<HTMLAttributes<HTMLDivElement>> = styled.aside`
     display: flex;
@@ -54,13 +55,19 @@ const BigText: FC<HTMLAttributes<HTMLSpanElement>> = styled(WelcomingText)`
     }
 `;
 
-const WelcomePresentation: FC<HTMLAttributes<HTMLDivElement>> = () => (
-    <Presentation>
-        <WelcomingText>
-            <BigText>Olá,</BigText>
-            seja bem vindo!
-        </WelcomingText>
-    </Presentation>
-);
+const WelcomePresentation: FC<HTMLAttributes<HTMLDivElement>> = () => {
+    const {
+        presentation: { hello, welcome }
+    } = getI18n();
+
+    return (
+        <Presentation>
+            <WelcomingText>
+                <BigText>{hello}</BigText>
+                {welcome}
+            </WelcomingText>
+        </Presentation>
+    );
+};
 
 export default WelcomePresentation;

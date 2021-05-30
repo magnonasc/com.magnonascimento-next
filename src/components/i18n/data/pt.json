@@ -1,5 +1,10 @@
 {
+    "presentation": {
+        "hello": "Olá,",
+        "welcome": "seja bem vindo!"
+    },
     "about": {
+        "title": "Sobre Mim",
         "greetings": {
             "goodMorning": "Bom dia!",
             "goodAfternoon": "Boa tarde!",
@@ -15,6 +20,7 @@
         ]
     },
     "professional": {
+        "title": "Profissional",
         "previousJobExperiences": [
             {
                 "id": "hurb-jan2020-present",
@@ -46,7 +52,7 @@
                 "jobProjects": [
                     {
                         "projectTitle": "Oi - Portal Minha Oi (Fevereiro 2020 - Dezembro 2020)",
-                        "projectDescription": "Participei do desenvolvimento do portal Minha Oi na época de uma grande mudança no Front-End, conseguindo colocar em prática todo o conhecimento prévio em Node e React obtido por meio de estudos por conta própria. Tive oportunidade de me envolver tanto com Front-End (React) quanto Back-End (Node), neste projeto utilizei também MongoDB, Redis (cache), OracleDB, Kibana (logs) e diversas outras integrações.",
+                        "projectDescription": "Participei do desenvolvimento do Portal Minha Oi na época de uma grande mudança no Front-End, conseguindo colocar em prática todo o conhecimento prévio em Node e React obtido por meio de estudos por conta própria. Tive oportunidade de me envolver tanto com Front-End (React) quanto Back-End (Node). Neste projeto utilizei também MongoDB, Redis (cache), OracleDB, Kibana (logs) e diversas outras integrações.",
                         "stack": [
                             "Node",
                             "React",

@@ -4,6 +4,7 @@
         "welcome": "seja bem vindo!"
     },
     "about": {
+        "id": "about-me",
         "title": "Sobre Mim",
         "greetings": {
             "goodMorning": "Bom dia!",
@@ -20,6 +21,7 @@
         ]
     },
     "professional": {
+        "id": "professional",
         "title": "Profissional",
         "previousJobExperiences": [
             {

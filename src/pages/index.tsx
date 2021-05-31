@@ -1,5 +1,6 @@
 import { FC, HTMLAttributes } from 'react';
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
 import styled from 'styled-components';
 import Masterpage from '../components/templates/Masterpage';
 import TitledSection from '../components/molecules/TitledSection';
@@ -29,11 +30,11 @@ const Content: FC<HTMLAttributes<HTMLDivElement>> = styled.main`
     }
 `;
 
+const TableOfContents = dynamic(() => import('../components/molecules/TableOfContents'), { ssr: false });
+
 const Home: FC = () => {
-    const {
-        about: { title: aboutTitle },
-        professional: { title: professionalTitle }
-    } = getI18n();
+    const { about, professional } = getI18n();
+    const pageContents = [about, professional];
 
     return (
         <>
@@ -44,10 +45,11 @@ const Home: FC = () => {
             <Masterpage>
                 <WelcomePresentation />
                 <Content>
-                    <TitledSection title={aboutTitle}>
+                    <TableOfContents pageContents={pageContents} />
+                    <TitledSection title={about.title} id={about.id}>
                         <About />
                     </TitledSection>
-                    <TitledSection title={professionalTitle}>
+                    <TitledSection title={professional.title} id={professional.id}>
                         <Professional />
                     </TitledSection>
                 </Content>

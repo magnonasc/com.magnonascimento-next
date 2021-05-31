@@ -4,6 +4,7 @@
         "welcome": "welcome to my website!"
     },
     "about": {
+        "id": "about-me",
         "title": "About Me",
         "greetings": {
             "goodMorning": "Good morning!",
@@ -20,6 +21,7 @@
         ]
     },
     "professional": {
+        "id": "professional",
         "title": "Professional",
         "previousJobExperiences": [
             {

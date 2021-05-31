@@ -49,8 +49,8 @@ type TitledSectionProps = HTMLAttributes<HTMLDivElement> & {
     title: string;
 };
 
-const Home: FC<TitledSectionProps> = ({ title, children }) => (
-    <TitledSection>
+const Home: FC<TitledSectionProps> = ({ title, children, ...props }) => (
+    <TitledSection {...props}>
         <Title>{title}</Title>
         {children}
     </TitledSection>

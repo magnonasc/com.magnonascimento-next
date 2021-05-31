@@ -7,7 +7,7 @@ import getI18n from '../../../i18n';
 import { Paragraph } from '../../atoms/Text';
 import SocialMenu from '../../molecules/SocialMenu';
 
-const DynamicGreeting = dynamic(() => import('../../molecules/Greeting'), { ssr: false });
+const Greetings = dynamic(() => import('../../molecules/Greeting'), { ssr: false });
 
 const BIRTH_DATE = moment('1997-09-05', 'YYYY-MM-DD');
 const currentAge = Math.ceil(moment.duration(moment().diff(BIRTH_DATE)).years());
@@ -42,7 +42,7 @@ const Professional: FC<HTMLAttributes<HTMLDivElement>> = () => {
 
     return (
         <AboutContainer>
-            <DynamicGreeting />
+            <Greetings />
             <AboutParagraph>{sprintf(presentation, currentAge)}</AboutParagraph>
             {description.map((paragraph, index) => (
                 <AboutParagraph key={`about-${index}`}>{paragraph}</AboutParagraph>

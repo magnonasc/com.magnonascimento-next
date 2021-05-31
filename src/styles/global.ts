@@ -52,6 +52,10 @@ export default createGlobalStyle`
 
     /* End of Reset CSS */
 
+    html {
+        scroll-behavior: smooth;
+    }
+
     body {
         background-color: ${({ theme }) => theme.colors.background.primary};
     }

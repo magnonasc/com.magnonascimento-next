@@ -70,34 +70,38 @@ const TableOfContents: FC<TableOfContentsProps> = ({ pageContents }) => {
 
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
-            if (currentScrollY === 0) {
+            if (currentScrollY <= 0) {
                 contentAnchorRefs.current.top.classList.add('current');
             } else {
                 contentAnchorRefs.current.top.classList.remove('current');
-
-                Object.keys(contentAnchorRefs.current).forEach((key) => {
-                    if (key === 'top') {
-                        return;
-                    }
-
-                    const currentMarker = contentAnchorRefs.current[key];
-                    const currentElement = document.getElementById(key);
-                    if (
-                        currentScrollY >= currentElement.offsetTop &&
-                        currentScrollY <= currentElement.offsetTop + currentElement.offsetHeight
-                    ) {
-                        currentMarker.innerText = '●';
-                    } else {
-                        currentMarker.innerText = '○';
-                    }
-                });
             }
+
+            Object.keys(contentAnchorRefs.current).forEach((key) => {
+                if (key === 'top') {
+                    return;
+                }
+
+                const currentMarker = contentAnchorRefs.current[key];
+                const currentElement = document.getElementById(key);
+                if (
+                    currentScrollY >= currentElement.offsetTop &&
+                    currentScrollY <= currentElement.offsetTop + currentElement.offsetHeight
+                ) {
+                    currentMarker.innerText = '●';
+                } else {
+                    currentMarker.innerText = '○';
+                }
+            });
         };
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
 
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    }, [window.pageYOffset]);
+
+    const triggerHandleScroll = () => {
+        window.dispatchEvent(new CustomEvent('scroll'));
+    };
 
     return (
         <Container>
@@ -107,6 +111,7 @@ const TableOfContents: FC<TableOfContentsProps> = ({ pageContents }) => {
                 }}
                 href="#top"
                 className="top"
+                onClick={triggerHandleScroll}
             >
                 △
             </AnchorButton>
@@ -117,6 +122,7 @@ const TableOfContents: FC<TableOfContentsProps> = ({ pageContents }) => {
                     }}
                     key={pageContent.id}
                     href={`#${pageContent.id}`}
+                    onClick={triggerHandleScroll}
                 >
                     ○
                 </AnchorButton>

@@ -15,7 +15,7 @@ const Presentation: FC<HTMLAttributes<HTMLDivElement>> = styled.aside`
     animation-name: wipeUp;
     animation-duration: 2.5s;
     animation-delay: 1s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: both;
     overflow: hidden;
 
     @keyframes wipeUp {
@@ -37,7 +37,7 @@ const WelcomingText: FC<HTMLAttributes<HTMLSpanElement>> = styled(Span)`
     animation-name: zoomOut;
     animation-duration: 2.5s;
     animation-delay: 1s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: both;
 
     @keyframes zoomOut {
         to {

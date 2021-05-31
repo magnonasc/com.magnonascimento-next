@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes } from 'react';
+import { FC, HTMLAttributes, ReactNode } from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import styled from 'styled-components';
@@ -32,7 +32,7 @@ const Content: FC<HTMLAttributes<HTMLDivElement>> = styled.main`
 
 const TableOfContents = dynamic(() => import('../components/molecules/TableOfContents'), { ssr: false });
 
-const Home: FC = () => {
+const Home: FC<ReactNode> = () => {
     const { about, professional } = getI18n();
     const pageContents = [about, professional];
 

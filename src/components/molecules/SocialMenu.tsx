@@ -30,7 +30,7 @@ const SocialLink = styled.a`
     animation-name: fadeIn;
     animation-duration: 5s;
     animation-delay: 1s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: both;
 `;
 
 const SocialMenu: FC<HTMLAttributes<HTMLDivElement>> = () => (

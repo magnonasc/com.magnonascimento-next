@@ -16,6 +16,20 @@ const TitledSection: FC<HTMLAttributes<HTMLDivElement>> = styled.section`
     & + section {
         margin-top: 2rem;
     }
+
+    animation-name: fadeInSection;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+
+    @keyframes fadeInSection {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
 `;
 
 const Title: FC<HTMLAttributes<HTMLSpanElement>> = styled.h2`
@@ -31,9 +45,9 @@ const Title: FC<HTMLAttributes<HTMLSpanElement>> = styled.h2`
     }
 
     animation-name: fadeInSectionTitle;
-    animation-duration: 10s;
+    animation-duration: 8s;
     animation-delay: 1s;
-    animation-fill-mode: backwards;
+    animation-fill-mode: both;
 
     @keyframes fadeInSectionTitle {
         from {

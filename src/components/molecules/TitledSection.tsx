@@ -33,7 +33,7 @@ const Title: FC<HTMLAttributes<HTMLSpanElement>> = styled.h2`
     animation-name: fadeInSectionTitle;
     animation-duration: 10s;
     animation-delay: 1s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: backwards;
 
     @keyframes fadeInSectionTitle {
         from {

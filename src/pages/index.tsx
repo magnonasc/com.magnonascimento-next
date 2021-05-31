@@ -18,7 +18,7 @@ const Content: FC<HTMLAttributes<HTMLDivElement>> = styled.main`
     animation-name: fadeIn;
     animation-duration: 2.5s;
     animation-delay: 1s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: backwards;
 
     @keyframes fadeIn {
         from {

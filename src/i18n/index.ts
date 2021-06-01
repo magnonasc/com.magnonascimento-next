@@ -1,19 +1,17 @@
 import { useRouter } from 'next/router';
-import ptBR from './data/pt.json';
-import enUS from './data/en.json';
+import pt from './data/pt.json';
+import en from './data/en.json';
 
-const getI18n: () => typeof ptBR = () => {
+const getI18n: () => typeof pt = () => {
     const { locale } = useRouter();
 
     switch (locale) {
         case 'en':
-        case 'en-US':
-            return enUS;
+            return en;
         case 'pt':
-        case 'pt-BR':
-            return ptBR;
+            return pt;
         default:
-            return ptBR;
+            return pt;
     }
 };
 

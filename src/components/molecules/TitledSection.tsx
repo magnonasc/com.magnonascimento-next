@@ -13,10 +13,6 @@ const TitledSection: FC<HTMLAttributes<HTMLDivElement>> = styled.section`
 
     padding-top: 3rem;
 
-    & + section {
-        margin-top: 2rem;
-    }
-
     animation-name: fadeInSection;
     animation-duration: 5s;
     animation-delay: 1s;
@@ -41,7 +37,7 @@ const Title: FC<HTMLAttributes<HTMLSpanElement>> = styled.h2`
     font-size: 5rem;
 
     @media (max-width: 768px) {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     animation-name: fadeInSectionTitle;

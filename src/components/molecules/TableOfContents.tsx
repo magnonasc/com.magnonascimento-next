@@ -85,7 +85,7 @@ const TableOfContents: FC<TableOfContentsProps> = ({ pageContents }) => {
                 const currentElement = document.getElementById(key);
                 if (
                     currentScrollY >= currentElement.offsetTop &&
-                    currentScrollY <= currentElement.offsetTop + currentElement.offsetHeight
+                    currentScrollY < currentElement.offsetTop + currentElement.offsetHeight
                 ) {
                     currentMarker.innerText = '●';
                 } else {

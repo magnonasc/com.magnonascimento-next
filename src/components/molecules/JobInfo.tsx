@@ -1,6 +1,6 @@
 import { FC, HTMLAttributes } from 'react';
 import styled from 'styled-components';
-import { Heading1, Heading2, Heading3, Heading4, Paragraph as ProjectDescription, Span } from '../atoms/Text';
+import { Heading3, Heading4, Heading5, Paragraph as ProjectDescription, Span } from '../atoms/Text';
 import Icon from '../atoms/Icons';
 
 const Container = styled.section`
@@ -12,7 +12,7 @@ const Container = styled.section`
     max-width: 50rem;
 `;
 
-const CompanyName = styled(Heading1)`
+const CompanyName = styled(Heading3)`
     color: ${({ color }) => color};
     font-size: 4rem;
 
@@ -21,7 +21,7 @@ const CompanyName = styled(Heading1)`
     }
 `;
 
-const JobTitle = styled(Heading2)`
+const JobTitle = styled(Heading4)`
     font-size: 1.5rem;
 
     @media (max-width: 768px) {
@@ -29,11 +29,11 @@ const JobTitle = styled(Heading2)`
     }
 `;
 
-const JobPeriod = styled(Heading3)`
+const JobPeriod = styled(Span)`
     margin: 2rem 0 1rem 0;
 `;
 
-const ProjectTitle = styled(Heading4)`
+const ProjectTitle = styled(Heading5)`
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
 

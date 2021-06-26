@@ -40,6 +40,10 @@ const Title: FC<HTMLAttributes<HTMLSpanElement>> = styled.h2`
         font-size: 2rem;
     }
 
+    @media (max-height: 680px) {
+        font-size: 3rem;
+    }
+
     animation-name: fadeInSectionTitle;
     animation-duration: 8s;
     animation-delay: 1s;

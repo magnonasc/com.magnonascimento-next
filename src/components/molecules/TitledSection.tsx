@@ -40,7 +40,7 @@ const Title: FC<HTMLAttributes<HTMLSpanElement>> = styled.h2`
         font-size: 2rem;
     }
 
-    @media (max-height: 680px) {
+    @media (max-height: 680px) and (min-width: 769px) {
         font-size: 3rem;
     }
 

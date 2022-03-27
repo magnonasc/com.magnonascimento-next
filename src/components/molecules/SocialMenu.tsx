@@ -36,14 +36,14 @@ const SocialLink = styled.a`
 const SocialMenu: FC<HTMLAttributes<HTMLDivElement>> = () => (
     <SocialContainer>
         <IconContainer>
-            <SocialLink href="https://github.com/magnonasc" rel="noreferrer" target="_blank">
+            <SocialLink href="https://github.com/magnonasc" rel="noreferrer" target="_blank" title="Github">
                 <Icon name="Github" />
             </SocialLink>
-            <SocialLink href="https://www.linkedin.com/in/magnonasc/" rel="noreferrer" target="_blank">
+            <SocialLink href="https://www.linkedin.com/in/magnonasc/" rel="noreferrer" target="_blank" title="LinkedIn">
                 <Icon name="LinkedIn" />
             </SocialLink>
         </IconContainer>
-        <SocialLink href="mailto:magno@magnonascimento.com">magno@magnonascimento.com</SocialLink>
+        <SocialLink href="mailto:magno@magnonascimento.com" title="E-mail">magno@magnonascimento.com</SocialLink>
     </SocialContainer>
 );
 

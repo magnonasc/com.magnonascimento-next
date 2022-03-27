@@ -43,7 +43,9 @@ const SocialMenu: FC<HTMLAttributes<HTMLDivElement>> = () => (
                 <Icon name="LinkedIn" />
             </SocialLink>
         </IconContainer>
-        <SocialLink href="mailto:magno@magnonascimento.com" title="E-mail">magno@magnonascimento.com</SocialLink>
+        <SocialLink href="mailto:magno@magnonascimento.com" title="E-mail">
+            magno@magnonascimento.com
+        </SocialLink>
     </SocialContainer>
 );
 

@@ -11,9 +11,6 @@ const GOOD_NIGHT_HOUR = 20;
 const AboutParagraph = styled(Paragraph)`
     margin: 0.5rem 0;
     line-height: 1.75rem;
-
-    text-align: justify;
-    text-justify: inter-word;
 `;
 
 const Greeting: FC<HTMLAttributes<HTMLDivElement>> = () => {

@@ -52,8 +52,6 @@ const JobDescription = styled.section`
     @media (max-width: 768px) {
         min-width: 16rem;
         max-width: 100%;
-        text-align: justify;
-        text-justify: inter-word;
     }
 `;
 

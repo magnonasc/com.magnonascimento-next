@@ -1,4 +1,4 @@
-import { AppProps } from 'next/dist/next-server/lib/router/router';
+import { AppProps } from 'next/app';
 import { FC, useEffect, useState } from 'react';
 import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';

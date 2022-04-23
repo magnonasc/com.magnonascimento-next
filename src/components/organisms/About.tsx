@@ -3,11 +3,11 @@ import dynamic from 'next/dynamic';
 import styled from 'styled-components';
 import { sprintf } from 'sprintf-js';
 import moment from 'moment';
-import getI18n from '../../../i18n';
-import { Paragraph } from '../../atoms/Text';
-import SocialMenu from '../../molecules/SocialMenu';
+import getI18n from '../../i18n';
+import { Paragraph } from '../atoms/Text';
+import SocialMenu from '../molecules/SocialMenu';
 
-const Greetings = dynamic(() => import('../../molecules/Greeting'), { ssr: false });
+const Greetings = dynamic(() => import('../molecules/Greeting'), { ssr: false });
 
 const BIRTH_DATE = moment('1997-09-05', 'YYYY-MM-DD');
 const currentAge = Math.ceil(moment.duration(moment().diff(BIRTH_DATE)).years());

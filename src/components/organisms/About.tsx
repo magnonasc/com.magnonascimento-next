@@ -7,7 +7,7 @@ import SocialMenu from '../molecules/SocialMenu';
 import Greeting from '../molecules/Greeting';
 
 const BIRTH_DATE = moment('1997-09-05', 'YYYY-MM-DD');
-const currentAge = Math.ceil(moment.duration(moment().diff(BIRTH_DATE)).years());
+const currentAge = moment.duration(moment().diff(BIRTH_DATE)).years();
 
 const AboutContainer = styled.section`
     display: flex;

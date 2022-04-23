@@ -85,7 +85,7 @@ const Technology = styled.figure`
     }
 `;
 
-interface Props extends HTMLAttributes<HTMLDivElement> {
+export type JobInfoProps = {
     companyName: string;
     titleColor: string;
     jobTitle: string;
@@ -96,6 +96,8 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
         stack: string[];
     }[];
 }
+
+interface Props extends HTMLAttributes<HTMLDivElement>, JobInfoProps {};
 
 const JobInfo: FC<Props> = ({ id, companyName, titleColor, jobTitle, jobPeriod, jobProjects, className }: Props) => (
     <Container className={className} id={id}>

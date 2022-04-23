@@ -1,7 +1,7 @@
 import { FC, HTMLAttributes } from 'react';
+import { useTranslation } from 'next-i18next';
 import styled from 'styled-components';
 import { Span } from '../atoms/Text';
-import getI18n from '../../i18n';
 
 const Presentation: FC<HTMLAttributes<HTMLDivElement>> = styled.aside`
     display: flex;
@@ -56,15 +56,13 @@ const BigText: FC<HTMLAttributes<HTMLSpanElement>> = styled(WelcomingText)`
 `;
 
 const WelcomePresentation: FC<HTMLAttributes<HTMLDivElement>> = () => {
-    const {
-        presentation: { hello, welcome }
-    } = getI18n();
+    const { t } = useTranslation();
 
     return (
         <Presentation>
             <WelcomingText>
-                <BigText>{hello}</BigText>
-                {welcome}
+                <BigText>{t('presentation.hello')}</BigText>
+                {t('presentation.welcome')}
             </WelcomingText>
         </Presentation>
     );

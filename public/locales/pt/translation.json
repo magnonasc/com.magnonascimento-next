@@ -4,7 +4,6 @@
         "welcome": "seja bem vindo!"
     },
     "about": {
-        "id": "about-me",
         "title": "Sobre Mim",
         "greetings": {
             "goodMorning": "Bom dia!",
@@ -13,7 +12,7 @@
             "goodNight": "Boa noite!",
             "default": "Olá!"
         },
-        "presentation": "Eu me chamo Magno Nascimento, tenho %s anos, sou graduando de Sistemas de Informação pela Universidade Federal do Estado do Rio de Janeiro (UNIRIO) e atualmente trabalho como Desenvolvedor Fullstack (maior foco em Back-End) na HURB.",
+        "presentation": "Eu me chamo Magno Nascimento, tenho {{age}} anos, sou graduando de Sistemas de Informação pela Universidade Federal do Estado do Rio de Janeiro (UNIRIO) e atualmente trabalho como Desenvolvedor Fullstack (maior foco em Back-End) na HURB.",
         "description": [
             "Sou apaixonado pelo que faço e procuro sempre estar atualizado com as tendências do momento no mercado. Prezo sempre pela qualidade e me sinto muito bem quando realizo uma entrego de valor.",
             "Tenho interesses também em finanças, livros, jogos e músicas.",
@@ -21,13 +20,12 @@
         ]
     },
     "professional": {
-        "id": "professional",
         "title": "Profissional",
         "previousJobExperiences": [
             {
                 "id": "hurb-jan2020-present",
                 "companyName": "HURB",
-                "companyBrandColor": "#293e79",
+                "titleColor": "#293e79",
                 "jobTitle": "Desenvolvedor Fullstack",
                 "jobPeriod": "Janeiro 2021 - Presente",
                 "jobProjects": [
@@ -48,7 +46,7 @@
             {
                 "id": "avanade-oct2019-dec2019",
                 "companyName": "Avanade",
-                "companyBrandColor": "#ff5200",
+                "titleColor": "#ff5200",
                 "jobTitle": "Desenvolvedor Fullstack",
                 "jobPeriod": "Outubro 2019 - Dezembro 2020",
                 "jobProjects": [
@@ -80,7 +78,7 @@
             {
                 "id": "globalmentor-jun2016-jul2019",
                 "companyName": "GlobalMentor",
-                "companyBrandColor": "#357cf6",
+                "titleColor": "#357cf6",
                 "jobTitle": "Desenvolvedor Java Back-End",
                 "jobPeriod": "Junho 2016 - Julho 2019",
                 "jobProjects": [

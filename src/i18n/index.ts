@@ -1,18 +1,18 @@
-import { useRouter } from 'next/router';
-import pt from './data/pt.json';
-import en from './data/en.json';
+import pt from '../../public/locales/pt/translation.json';
+import en from '../../public/locales/en/translation.json';
+import i18n from 'i18next';
+import httpApi from 'i18next-http-backend';
+import { initReactI18next } from 'react-i18next';
 
-const getI18n: () => typeof pt = () => {
-    const { locale } = useRouter();
-
-    switch (locale) {
-        case 'en':
-            return en;
-        case 'pt':
-            return pt;
-        default:
-            return pt;
+i18n.use(httpApi).use(initReactI18next).init({
+    supportedLngs: ['pt', 'en'],
+    fallbackLng: 'pt',
+    react: {
+        useSuspense: false
     }
-};
+});
 
-export default getI18n;
+i18n.addResourceBundle('pt', 'translation', pt);
+i18n.addResourceBundle('en', 'translation', en);
+
+export default i18n;

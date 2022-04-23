@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import GlobalStyle from '../styles/global';
 import darkTheme from '../styles/dark-theme';
 import lightTheme from '../styles/light-theme';
+import { appWithTranslation } from 'next-i18next';
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
     const [isDarkModePreferred, setIsDarkModePreferred] = useState(true);
@@ -44,4 +45,4 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
     );
 };
 
-export default MyApp;
+export default appWithTranslation(MyApp);

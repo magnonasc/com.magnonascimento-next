@@ -1,13 +1,10 @@
 import { FC, HTMLAttributes } from 'react';
-import dynamic from 'next/dynamic';
 import styled from 'styled-components';
-import { sprintf } from 'sprintf-js';
 import moment from 'moment';
-import getI18n from '../../i18n';
 import { Paragraph } from '../atoms/Text';
 import SocialMenu from '../molecules/SocialMenu';
-
-const Greetings = dynamic(() => import('../molecules/Greeting'), { ssr: false });
+import { useTranslation } from 'next-i18next';
+import Greeting from '../molecules/Greeting';
 
 const BIRTH_DATE = moment('1997-09-05', 'YYYY-MM-DD');
 const currentAge = Math.ceil(moment.duration(moment().diff(BIRTH_DATE)).years());
@@ -33,15 +30,13 @@ const AboutParagraph = styled(Paragraph)`
 `;
 
 const Professional: FC<HTMLAttributes<HTMLDivElement>> = () => {
-    const {
-        about: { presentation, description }
-    } = getI18n();
+    const { t } = useTranslation();
 
     return (
         <AboutContainer>
-            <Greetings />
-            <AboutParagraph>{sprintf(presentation, currentAge)}</AboutParagraph>
-            {description.map((paragraph, index) => (
+            <Greeting />
+            <AboutParagraph>{t('about.presentation', { age: currentAge })}</AboutParagraph>
+            {t<string, string[]>('about.description', { returnObjects: true }).map((paragraph, index) => (
                 <AboutParagraph key={`about-${index}`}>{paragraph}</AboutParagraph>
             ))}
             <SocialMenu />

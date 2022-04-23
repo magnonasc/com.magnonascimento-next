@@ -1,4 +1,15 @@
-import { AnchorHTMLAttributes, FC, HTMLAttributes, ReactNode, useRef, RefAttributes, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import {
+    AnchorHTMLAttributes,
+    FC,
+    HTMLAttributes,
+    ReactNode,
+    useRef,
+    RefAttributes,
+    useEffect,
+    useCallback
+} from 'react';
+import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 
 const Container: FC<HTMLAttributes<HTMLDivElement>> = styled.aside`
@@ -50,17 +61,25 @@ const AnchorButton: FC<AnchorButtonProps> = styled.a`
 `;
 
 type TableOfContentsProps = HTMLAttributes<HTMLDivElement> & {
-    pageContents: {
-        id: string;
-        title: string;
-    }[];
+    pageContents: string[];
 };
 
 type contentAnchorRefsType = {
     [elementId: string]: HTMLAnchorElement;
 };
 
+const getNextLocale = (currentLocale) => {
+    switch (currentLocale) {
+        case 'en':
+            return { locale: 'pt', flag: '🇧🇷' };
+        case 'pt':
+        default:
+            return { locale: 'en', flag: '🇺🇸' };
+    }
+};
+
 const TableOfContents: FC<TableOfContentsProps> = ({ pageContents }) => {
+    const { i18n } = useTranslation();
     const contentAnchorRefs = useRef<contentAnchorRefsType>({});
 
     useEffect(() => {
@@ -99,9 +118,13 @@ const TableOfContents: FC<TableOfContentsProps> = ({ pageContents }) => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, [window.pageYOffset]);
 
-    const triggerHandleScroll = () => {
+    const triggerHandleScroll = useCallback(() => {
         window.dispatchEvent(new CustomEvent('scroll'));
-    };
+    }, []);
+
+    const handleLocale = useCallback(() => {
+        i18n.changeLanguage(getNextLocale(i18n.language).locale)
+    }, []);
 
     return (
         <Container>
@@ -118,15 +141,16 @@ const TableOfContents: FC<TableOfContentsProps> = ({ pageContents }) => {
             {pageContents.map((pageContent) => (
                 <AnchorButton
                     ref={(element) => {
-                        contentAnchorRefs.current[pageContent.id] = element;
+                        contentAnchorRefs.current[pageContent] = element;
                     }}
-                    key={pageContent.id}
-                    href={`#${pageContent.id}`}
+                    key={pageContent}
+                    href={`#${pageContent}`}
                     onClick={triggerHandleScroll}
                 >
                     ○
                 </AnchorButton>
             ))}
+            <AnchorButton onClick={handleLocale}>{getNextLocale(i18n.language).flag}</AnchorButton>
         </Container>
     );
 };

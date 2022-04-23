@@ -1,25 +1,27 @@
 import { FC, HTMLAttributes } from 'react';
 import styled from 'styled-components';
-import JobInfo from '../molecules/JobInfo';
-import getI18n from '../../i18n';
+import JobInfo, { JobInfoProps } from '../molecules/JobInfo';
+import { useTranslation } from 'next-i18next';
 
 const JobInfoContainer = styled(JobInfo)`
     min-height: calc(100vh - 2.5rem);
 `;
 
+type JobInfoType = JobInfoProps & {
+    id: string;
+};
+
 const Professional: FC<HTMLAttributes<HTMLDivElement>> = () => {
-    const {
-        professional: { previousJobExperiences }
-    } = getI18n();
+    const { t } = useTranslation();
 
     return (
         <>
-            {previousJobExperiences.map(
-                ({ id, companyName, companyBrandColor = 'white', jobTitle, jobPeriod, jobProjects }) => (
+            {t<string, JobInfoType[]>('professional.previousJobExperiences', { returnObjects: true }).map(
+                ({ id, companyName, titleColor = 'white', jobTitle, jobPeriod, jobProjects }) => (
                     <JobInfoContainer
                         key={id}
                         companyName={companyName}
-                        titleColor={companyBrandColor}
+                        titleColor={titleColor}
                         jobTitle={jobTitle}
                         jobPeriod={jobPeriod}
                         jobProjects={jobProjects}

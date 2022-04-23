@@ -1,6 +1,6 @@
 import { FC, HTMLAttributes, useEffect, useState } from 'react';
+import { useTranslation } from 'next-i18next';
 import styled from 'styled-components';
-import getI18n from '../../i18n';
 import { Paragraph } from '../atoms/Text';
 
 const GOOD_MORNING_HOUR = 6;
@@ -14,32 +14,30 @@ const AboutParagraph = styled(Paragraph)`
 `;
 
 const Greeting: FC<HTMLAttributes<HTMLDivElement>> = () => {
-    const {
-        about: { greetings }
-    } = getI18n();
-    const [greeting, setGreeting] = useState(greetings.default);
+    const { t } = useTranslation();
+    const [greeting, setGreeting] = useState(t('about.greetings.default'));
 
     useEffect(() => {
         const currentDate = new Date().getHours();
 
         switch (true) {
             case currentDate >= GOOD_NIGHT_HOUR || currentDate <= GOOD_MORNING_HOUR:
-                setGreeting(greetings.goodNight);
+                setGreeting(t('about.greetings.goodNight'));
                 break;
             case currentDate >= GOOD_EVENING_HOUR:
-                setGreeting(greetings.goodEvening);
+                setGreeting(t('about.greetings.goodEvening'));
                 break;
             case currentDate >= GOOD_AFTERNOON_HOUR:
-                setGreeting(greetings.goodAfternoon);
+                setGreeting(t('about.greetings.goodAfternoon'));
                 break;
             case currentDate >= GOOD_MORNING_HOUR:
-                setGreeting(greetings.goodMorning);
+                setGreeting(t('about.greetings.goodMorning'));
                 break;
             default:
-                setGreeting(greetings.default);
+                setGreeting(t('about.greetings.default'));
                 break;
         }
-    }, [window]);
+    }, []);
 
     return <AboutParagraph>{greeting}</AboutParagraph>;
 };

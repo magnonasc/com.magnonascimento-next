@@ -1,12 +1,12 @@
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import { FC, HTMLAttributes } from 'react';
+import { FC, HTMLAttributes, ReactNode } from 'react';
 import styled from 'styled-components';
+import { useTranslation } from 'next-i18next';
 import TitledSection from '../molecules/TitledSection';
 import Professional from '../organisms/Professional';
 import About from '../organisms/About';
 import WelcomePresentation from '../organisms/WelcomePresentation';
-import { useTranslation } from 'next-i18next';
 
 const MasterContainer: FC<HTMLAttributes<HTMLDivElement>> = styled.div<HTMLAttributes<HTMLDivElement>>`
     display: flex;
@@ -48,7 +48,7 @@ const Content: FC<HTMLAttributes<HTMLDivElement>> = styled.main`
 
 const TableOfContents = dynamic(() => import('../molecules/TableOfContents'), { ssr: false });
 
-const Homepage: FC<HTMLAttributes<HTMLDivElement>> = () => {
+const Homepage: FC<ReactNode> = () => {
     const { t } = useTranslation();
     const pageContents = ['about-me', 'professional'];
 

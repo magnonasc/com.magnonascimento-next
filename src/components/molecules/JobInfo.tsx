@@ -95,9 +95,9 @@ export type JobInfoProps = {
         projectDescription: string;
         stack: string[];
     }[];
-}
+};
 
-interface Props extends HTMLAttributes<HTMLDivElement>, JobInfoProps {};
+interface Props extends HTMLAttributes<HTMLDivElement>, JobInfoProps {}
 
 const JobInfo: FC<Props> = ({ id, companyName, titleColor, jobTitle, jobPeriod, jobProjects, className }: Props) => (
     <Container className={className} id={id}>

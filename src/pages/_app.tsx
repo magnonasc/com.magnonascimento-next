@@ -2,10 +2,10 @@ import { AppProps } from 'next/app';
 import { FC, useEffect, useState } from 'react';
 import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
+import { appWithTranslation } from 'next-i18next';
 import GlobalStyle from '../styles/global';
 import darkTheme from '../styles/dark-theme';
 import lightTheme from '../styles/light-theme';
-import { appWithTranslation } from 'next-i18next';
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
     const [isDarkModePreferred, setIsDarkModePreferred] = useState(true);

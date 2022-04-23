@@ -1,7 +1,7 @@
 import { FC, HTMLAttributes } from 'react';
 import styled from 'styled-components';
-import JobInfo, { JobInfoProps } from '../molecules/JobInfo';
 import { useTranslation } from 'next-i18next';
+import JobInfo, { JobInfoProps } from '../molecules/JobInfo';
 
 const JobInfoContainer = styled(JobInfo)`
     min-height: calc(100vh - 2.5rem);

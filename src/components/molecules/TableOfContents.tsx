@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import {
     AnchorHTMLAttributes,
     FC,
@@ -123,7 +122,7 @@ const TableOfContents: FC<TableOfContentsProps> = ({ pageContents }) => {
     }, []);
 
     const handleLocale = useCallback(() => {
-        i18n.changeLanguage(getNextLocale(i18n.language).locale)
+        i18n.changeLanguage(getNextLocale(i18n.language).locale);
     }, []);
 
     return (

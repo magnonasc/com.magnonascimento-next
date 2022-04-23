@@ -1,9 +1,9 @@
 import { FC, HTMLAttributes } from 'react';
 import styled from 'styled-components';
 import moment from 'moment';
+import { useTranslation } from 'next-i18next';
 import { Paragraph } from '../atoms/Text';
 import SocialMenu from '../molecules/SocialMenu';
-import { useTranslation } from 'next-i18next';
 import Greeting from '../molecules/Greeting';
 
 const BIRTH_DATE = moment('1997-09-05', 'YYYY-MM-DD');

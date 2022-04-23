@@ -20,10 +20,6 @@ const Container: FC<HTMLAttributes<HTMLDivElement>> = styled.aside`
     bottom: 1rem;
 
     border-radius: 2px;
-
-    @media (max-width: 768px) {
-        display: none;
-    }
 `;
 
 type AnchorButtonProps = AnchorHTMLAttributes<ReactNode> & RefAttributes<HTMLAnchorElement>;
@@ -57,10 +53,22 @@ const AnchorButton: FC<AnchorButtonProps> = styled.a`
             color: ${({ theme }) => theme.colors.background.tertiary};
         }
     }
+
+    @media (max-width: 768px) {
+        display: none;
+    }
 `;
 
 const LanguageButton: FC<AnchorButtonProps> = styled(AnchorButton)`
     font-size: 1.5rem;
+
+    @media (max-width: 768px) {
+        display: flex;
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 1rem;
+        background-color: ${({ theme }) => theme.colors.background.tertiary};
+    }
 `;
 
 type TableOfContentsProps = HTMLAttributes<HTMLDivElement> & {

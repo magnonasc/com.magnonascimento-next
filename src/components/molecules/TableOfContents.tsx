@@ -59,6 +59,10 @@ const AnchorButton: FC<AnchorButtonProps> = styled.a`
     }
 `;
 
+const LanguageButton: FC<AnchorButtonProps> = styled(AnchorButton)`
+    font-size: 1.5rem;
+`;
+
 type TableOfContentsProps = HTMLAttributes<HTMLDivElement> & {
     pageContents: string[];
 };
@@ -149,7 +153,7 @@ const TableOfContents: FC<TableOfContentsProps> = ({ pageContents }) => {
                     ○
                 </AnchorButton>
             ))}
-            <AnchorButton onClick={handleLocale}>{getNextLocale(i18n.language).flag}</AnchorButton>
+            <LanguageButton onClick={handleLocale}>{getNextLocale(i18n.language).flag}</LanguageButton>
         </Container>
     );
 };

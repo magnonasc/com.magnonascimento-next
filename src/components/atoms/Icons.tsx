@@ -34,7 +34,7 @@ const Icon: FC<IconProps> | null = ({ name }: IconProps) => {
         case 'Docker':
             return <DockerLogo fill="#2496ED" />;
         case 'Go':
-            return <GoLogo fill="#00ADD8" />
+            return <GoLogo fill="#00ADD8" />;
         case 'Java':
             return <JavaLogo fill="#007396" />;
         case 'Javascript':

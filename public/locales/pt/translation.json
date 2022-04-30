@@ -35,9 +35,11 @@
                         "stack": [
                             "Docker",
                             "Node",
+                            "React",
                             "MongoDB",
-                            "MySQL",
                             "PHP",
+                            "MySQL",
+                            "Go",
                             "Redis"
                         ]
                     }
@@ -68,9 +70,9 @@
                         "stack": [
                             "Java",
                             "Spring",
-                            "OracleDB",
                             "C#",
-                            "Python"
+                            "Python",
+                            "OracleDB"
                         ]
                     }
                 ]

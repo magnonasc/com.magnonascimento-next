@@ -4,6 +4,7 @@ import GithubLogo from '../../../public/images/icons/social-networks/github.svg'
 import FacebookLogo from '../../../public/images/icons/social-networks/facebook.svg';
 
 import DockerLogo from '../../../public/images/icons/technologies/docker.svg';
+import GoLogo from '../../../public/images/icons/technologies/go.svg';
 import JavaLogo from '../../../public/images/icons/technologies/java.svg';
 import JavascriptLogo from '../../../public/images/icons/technologies/javascript.svg';
 import MongoDBLogo from '../../../public/images/icons/technologies/mongodb.svg';
@@ -32,6 +33,8 @@ const Icon: FC<IconProps> | null = ({ name }: IconProps) => {
             return <FacebookLogo />;
         case 'Docker':
             return <DockerLogo fill="#2496ED" />;
+        case 'Go':
+            return <GoLogo fill="#00ADD8" />
         case 'Java':
             return <JavaLogo fill="#007396" />;
         case 'Javascript':

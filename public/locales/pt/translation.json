@@ -31,7 +31,7 @@
                 "jobProjects": [
                     {
                         "projectTitle": "Time de pagamentos",
-                        "projectDescription": "Participo dos principais projetos da área de pagamentos da empresa, desenvolvendo demandas tanto para times de operação internos, quanto para fornecedores (B2B) e cliente final (B2C).",
+                        "projectDescription": "Participei dos principais projetos da área de pagamentos da empresa, desenvolvendo demandas tanto para times de operação internos com o fornecimento dos dados necessários de conciliação de pagamentos, quanto para fornecedores (B2B) dando manutenção necessária ao portal exclusivo, e cliente final (B2C) com a disponibilização de novos meios de pagamentos e gerenciamento de dados de pagamentos salvos respeitando as normas da LGPD/GDPR e PCI DSS.",
                         "stack": [
                             "Docker",
                             "Node",
@@ -40,6 +40,17 @@
                             "PHP",
                             "MySQL",
                             "Go",
+                            "Redis"
+                        ]
+                    },
+                    {
+                        "projectTitle": "Time Checkout",
+                        "projectDescription": "Participo do desenvolvimento do novo Checkout, com foco na melhor experiência do usuário, segurança e performance.",
+                        "stack": [
+                            "Docker",
+                            "Node",
+                            "React",
+                            "MongoDB",
                             "Redis"
                         ]
                     }

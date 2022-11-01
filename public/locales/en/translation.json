@@ -31,7 +31,7 @@
                 "jobProjects": [
                     {
                         "projectTitle": "Payments Team",
-                        "projectDescription": "I'm involved with the main projects in the company's payments area, working on demands for internal operation teams, as well as for suppliers (B2B) and end customers (B2C).",
+                        "projectDescription": "I'm involved with the main projects in the company's payments area, working on demands for internal operation teams providing all the needed data for the payment reconciliation process, as well as for suppliers (B2B) providing maintenance to their exclusive portal, and end customers (B2C) adding support and maintaining new payment methods and managing saved payment data respecting LGPD/GDPR and PCI DSS rules.",
                         "stack": [
                             "Docker",
                             "Node",
@@ -40,6 +40,17 @@
                             "PHP",
                             "MySQL",
                             "Go",
+                            "Redis"
+                        ]
+                    },
+                    {
+                        "projectTitle": "Time Checkout",
+                        "projectDescription": "I'm part of the team that's developing the brand new Checkout for the company, focused on the best user experience, security and performance.",
+                        "stack": [
+                            "Docker",
+                            "Node",
+                            "React",
+                            "MongoDB",
                             "Redis"
                         ]
                     }

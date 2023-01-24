@@ -6,6 +6,7 @@ import { appWithTranslation } from 'next-i18next';
 import GlobalStyle from '../styles/global';
 import darkTheme from '../styles/dark-theme';
 import lightTheme from '../styles/light-theme';
+import AnalyticsWrapper from '../components/analytics';
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
     const [isDarkModePreferred, setIsDarkModePreferred] = useState(true);
@@ -40,6 +41,7 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
             <ThemeProvider theme={isDarkModePreferred ? darkTheme : lightTheme}>
                 <GlobalStyle />
                 <Component {...pageProps} />
+                <AnalyticsWrapper />
             </ThemeProvider>
         </>
     );

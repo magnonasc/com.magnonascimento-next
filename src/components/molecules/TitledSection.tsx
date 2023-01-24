@@ -21,6 +21,7 @@ const Title: FC<HTMLAttributes<HTMLSpanElement>> = styled.h2`
 
     font-family: 'Major Mono Display';
     font-size: 5rem;
+    color: #888;
 
     @media (max-width: 768px) {
         font-size: 2rem;

@@ -26,11 +26,6 @@ const SocialLink = styled.a`
         width: 3rem;
         fill: ${({ theme }) => theme.colors.icons.primary};
     }
-
-    animation-name: fadeIn;
-    animation-duration: 5s;
-    animation-delay: 1s;
-    animation-fill-mode: both;
 `;
 
 const SocialMenu: FC<HTMLAttributes<HTMLDivElement>> = () => (

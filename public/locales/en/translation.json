@@ -1,8 +1,4 @@
 {
-    "presentation": {
-        "hello": "Hello,",
-        "welcome": "welcome to my website!"
-    },
     "about": {
         "title": "About Me",
         "greetings": {

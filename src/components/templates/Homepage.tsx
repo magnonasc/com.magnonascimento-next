@@ -6,7 +6,6 @@ import { useTranslation } from 'next-i18next';
 import TitledSection from '../molecules/TitledSection';
 import Professional from '../organisms/Professional';
 import About from '../organisms/About';
-import WelcomePresentation from '../organisms/WelcomePresentation';
 
 const MasterContainer: FC<HTMLAttributes<HTMLDivElement>> = styled.div<HTMLAttributes<HTMLDivElement>>`
     display: flex;
@@ -30,20 +29,6 @@ const Content: FC<HTMLAttributes<HTMLDivElement>> = styled.main`
     flex-direction: column;
     align-items: center;
     width: 100%;
-
-    animation-name: fadeIn;
-    animation-duration: 2.5s;
-    animation-delay: 1s;
-    animation-fill-mode: backwards;
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
 `;
 
 const TableOfContents = dynamic(() => import('../molecules/TableOfContents'), { ssr: false });
@@ -58,7 +43,6 @@ const Homepage: FC<ReactNode> = () => {
                 <title>Magno Nascimento</title>
             </Head>
             <MasterContainer>
-                <WelcomePresentation />
                 <Content>
                     <TableOfContents pageContents={pageContents} />
                     <TitledSection title={t('about.title')} id="about-me">

@@ -1,8 +1,4 @@
 {
-    "presentation": {
-        "hello": "Olá,",
-        "welcome": "seja bem vindo!"
-    },
     "about": {
         "title": "Sobre Mim",
         "greetings": {
